@@ -89,7 +89,7 @@ CASE_BRIEF = """
 |---|---|---|---|
 | X-01 | Sutur-OCR-small | نموذج مفتوح الأوزان | قراءة الفواتير الممسوحة في طلبات التمويل |
 | X-02 | Sarid-70B-Instruct | نموذج لغوي مفتوح الأوزان، يعمل على السحابة الخاصة للصندوق | تلخيص طلبات التمويل لمحللي الائتمان |
-| X-03 | nuqta-pro لدى «نقطة السحابية» | نموذج مملوك مستضاف عبر واجهة برمجية | صياغة رسائل المقترضين والإجابة عن أسئلة الموظفين |
+| X-03 | sudum-pro لدى «سُدُم السحابية» | نموذج مملوك مستضاف عبر واجهة برمجية | صياغة رسائل المقترضين والإجابة عن أسئلة الموظفين |
 | X-04 | «مُتابِع» من «صَواب للخدمات الذكية» | خدمة وكلاء مستضافة | تذكير المقترضين بالأقساط والرد على أسئلتهم |
 | X-05 | sahifa-parse | مكتبة برمجية | استخراج النص من ملفات PDF |
 | X-06 | mustanad-mcp | خادم أدوات (Model Context Protocol) | ربط المساعد الداخلي بمخزن المستندات |
@@ -107,7 +107,7 @@ INTAKE = [
     ["X-06", "mustanad-mcp", "tool server", "mustanad project (public code host)", "connect the staff assistant to the document store; the Fund will add its own connector", "AGPL-3.0", "https://www.gnu.org/licenses/agpl-3.0.en.html", "cards/mustanad-mcp.md"],
     ["X-02", "Sarid-70B-Instruct", "model weights (fine-tuned)", "sarid-ai (public model hub)", "summarise loan applications for credit analysts, on the Fund's private cloud", "llama3.3", "https://www.llama.com/llama3_3/license/", "cards/sarid-70b-instruct.md"],
     ["X-07", "fawatir-scans", "dataset", "fawatir-open (public dataset hub)", "fine-tune the invoice reader next year", "see card", "https://creativecommons.org/licenses/by-nc/4.0/legalcode.en", "cards/fawatir-scans.md"],
-    ["X-03", "Nuqta Cloud Model Service (nuqta-pro)", "hosted proprietary model", "Nuqta Cloud", "draft borrower letters; answer staff questions", "Nuqta Cloud Model Service Terms", "terms/nuqta_cloud_terms.md", "terms/nuqta_cloud_terms.md"],
+    ["X-03", "Sudum Cloud Model Service (sudum-pro)", "hosted proprietary model", "Sudum Cloud", "draft borrower letters; answer staff questions", "Sudum Cloud Model Service Terms", "terms/sudum_cloud_terms.md", "terms/sudum_cloud_terms.md"],
 ]
 
 SAHIFA = """
@@ -198,27 +198,27 @@ online marketplaces between 2021 and 2024. Names and phone numbers printed on in
 fawatir-open contributors, fawatir-scans, version 1.0.
 """
 
-NUQTA_TERMS = """
-# Nuqta Cloud Model Service Terms
+SUDUM_TERMS = """
+# Sudum Cloud Model Service Terms
 
 Version 4.2. Fictional terms written for the SDAIA Academy course LDS-AIG-203. Not the terms of any real provider.
 
 ## 1. Definitions
 
-1.1 "Service" means Nuqta Cloud's hosted model service, reached through its API, and the models offered through it.
+1.1 "Service" means Sudum Cloud's hosted model service, reached through its API, and the models offered through it.
 1.2 "Customer Content" means inputs the Customer sends to the Service and outputs the Service returns.
-1.3 "Model Version" means a dated model identifier such as `nuqta-pro-2`. An "Alias" is an identifier such as `nuqta-pro-latest` that points to a Model Version chosen by Nuqta Cloud.
+1.3 "Model Version" means a dated model identifier such as `sudum-pro-2`. An "Alias" is an identifier such as `sudum-pro-latest` that points to a Model Version chosen by Sudum Cloud.
 
 ## 2. Access
 
-2.1 Nuqta Cloud grants the Customer a non-exclusive, non-transferable right to use the Service during the subscription term for the Customer's internal business purposes and for products the Customer offers to its own clients.
+2.1 Sudum Cloud grants the Customer a non-exclusive, non-transferable right to use the Service during the subscription term for the Customer's internal business purposes and for products the Customer offers to its own clients.
 2.2 No right to the model weights, parameters or source code is granted.
 
 ## 3. Restrictions
 
 3.1 The Customer must not resell, sublicense or provide the Service to third parties as a standalone model service.
 3.2 The Customer must not use outputs to develop models that compete with the Service.
-3.3 No attribution to Nuqta Cloud is required. The Customer must not state or imply that Nuqta Cloud endorses its products.
+3.3 No attribution to Sudum Cloud is required. The Customer must not state or imply that Sudum Cloud endorses its products.
 
 ## 4. Acceptable use
 
@@ -227,38 +227,38 @@ Version 4.2. Fictional terms written for the SDAIA Academy course LDS-AIG-203. N
 ## 5. Customer Content
 
 5.1 The Customer owns Customer Content.
-5.2 Unless the Customer is on the Enterprise plan with Data Controls switched on, Nuqta Cloud may use Customer Content to improve and train the Service.
-5.3 Nuqta Cloud keeps request logs, including Customer Content, for 30 days for abuse monitoring, on every plan.
+5.2 Unless the Customer is on the Enterprise plan with Data Controls switched on, Sudum Cloud may use Customer Content to improve and train the Service.
+5.3 Sudum Cloud keeps request logs, including Customer Content, for 30 days for abuse monitoring, on every plan.
 
 ## 6. Data location
 
-6.1 Customer Content may be processed in any region where Nuqta Cloud or its sub-processors operate.
+6.1 Customer Content may be processed in any region where Sudum Cloud or its sub-processors operate.
 6.2 Enterprise customers may select a storage region. When capacity in that region is constrained, inference may be routed to another region.
 
 ## 7. Model lifecycle
 
-7.1 Nuqta Cloud may update the Model Version an Alias points to at any time, without notice.
-7.2 Nuqta Cloud may deprecate a Model Version. A deprecated Model Version keeps working until its retirement date.
-7.3 Nuqta Cloud gives at least 21 days' notice of a retirement date, by email to the account administrator.
+7.1 Sudum Cloud may update the Model Version an Alias points to at any time, without notice.
+7.2 Sudum Cloud may deprecate a Model Version. A deprecated Model Version keeps working until its retirement date.
+7.3 Sudum Cloud gives at least 21 days' notice of a retirement date, by email to the account administrator.
 7.4 After the retirement date, requests to that Model Version fail.
 
 ## 8. Suspension and termination
 
 8.1 Either party may terminate for convenience with 30 days' notice.
-8.2 Nuqta Cloud may suspend the Service immediately for a breach of section 4.
+8.2 Sudum Cloud may suspend the Service immediately for a breach of section 4.
 
 ## 9. Data export and deletion
 
-9.1 For 14 days after termination the Customer may export its stored Customer Content in Nuqta Cloud's JSONL format.
-9.2 Nuqta Cloud deletes Customer Content within 30 days after termination, and from backups within 90 days. No certificate of deletion is issued.
+9.1 For 14 days after termination the Customer may export its stored Customer Content in Sudum Cloud's JSONL format.
+9.2 Sudum Cloud deletes Customer Content within 30 days after termination, and from backups within 90 days. No certificate of deletion is issued.
 
 ## 10. Changes to these terms
 
-10.1 Nuqta Cloud may change these terms by posting a new version. Continued use after 15 days means acceptance.
+10.1 Sudum Cloud may change these terms by posting a new version. Continued use after 15 days means acceptance.
 
 ## 11. Sub-processors
 
-11.1 The current list of sub-processors is on Nuqta Cloud's website. Nuqta Cloud gives 10 days' notice of a new sub-processor.
+11.1 The current list of sub-processors is on Sudum Cloud's website. Sudum Cloud gives 10 days' notice of a new sub-processor.
 """
 
 LICENCE_TABLE_HEAD = ["id", "artefact", "licence or terms", "commercial use", "redistribution", "attribution", "prohibited or restricted uses", "clauses relied on", "card or text conflict", "decision for the Fund", "condition or question"]
@@ -387,7 +387,7 @@ SAWAB_SERVICE = """
 - البيانات التي يعالجها: اسم المقترض، ورقم جواله، والرصيد المستحق، وتاريخ القسط، ونطاق درجة الائتمان، ونص المحادثة.
 - النموذج اللغوي: نموذج مستضاف لدى مزوّد خارجي (انظر قائمة الأطراف من الباطن).
 - الاستضافة: منصة «صواب» في مركز بيانات بالرياض.
-- منتجات «صواب» الأخرى: «DocSense» لتصنيف المستندات، وبوابة العملاء.
+- منتجات «صواب» الأخرى: «Sannaf» لتصنيف المستندات، وبوابة العملاء.
 """
 
 QUESTIONNAIRE = [
@@ -416,7 +416,7 @@ Itqan Assurance Ltd certifies that the management system of
 
 has been assessed and found to conform to **ISO/IEC 42001:2023**, Information technology, Artificial intelligence, Management system.
 
-**Scope of certification:** design, development and operation of the Sawab DocSense document classification platform, including model training and monitoring for DocSense.
+**Scope of certification:** design, development and operation of the Sawab Sannaf document classification platform, including model training and monitoring for Sannaf.
 
 Certificate number: ITQ-AIMS-0417
 Initial certification: 15 May 2026
@@ -475,7 +475,7 @@ PENTEST = """
 """
 
 SUBPROCESSORS = [
-    ["Nuqta Cloud", "استدعاء النموذج اللغوي (نص المحادثة، اسم المقترض، الرصيد)", "eu-central (خارج المملكة)، ومنطقة احتياطية حسب السعة", "منذ 2025"],
+    ["Sudum Cloud", "استدعاء النموذج اللغوي (نص المحادثة، اسم المقترض، الرصيد)", "eu-central (خارج المملكة)، ومنطقة احتياطية حسب السعة", "منذ 2025"],
     ["Rasil SMS (جهة افتراضية)", "إرسال الرسائل النصية (رقم الجوال، نص الرسالة)", "الرياض", "منذ 2024"],
     ["Sawab Riyadh data centre", "التخزين والتشغيل", "الرياض", "منذ 2023"],
 ]
@@ -511,30 +511,30 @@ MEMO_TEMPLATE = """
 # ---------------------------------------------------------------------------------------------
 
 DEPRECATION = """
-# Nuqta Cloud: model deprecation notice
+# Sudum Cloud: model deprecation notice
 
 To: account administrator, Athl SME Finance Fund
 Date: 2 March 2027
 
-We are retiring **nuqta-pro-2** on **23 March 2027** (section 7.3 of the Nuqta Cloud Model Service Terms).
-After that date, requests to `nuqta-pro-2` will fail.
+We are retiring **sudum-pro-2** on **23 March 2027** (section 7.3 of the Sudum Cloud Model Service Terms).
+After that date, requests to `sudum-pro-2` will fail.
 
-Recommended replacement: **nuqta-pro-3**. What changes:
+Recommended replacement: **sudum-pro-3**. What changes:
 
 - longer answers by default;
-- an updated safety policy: some requests that nuqta-pro-2 answered are now declined;
+- an updated safety policy: some requests that sudum-pro-2 answered are now declined;
 - a new price per thousand tokens (see the price list).
 
-`nuqta-pro-latest` already points to nuqta-pro-3 since 9 February 2027.
+`sudum-pro-latest` already points to sudum-pro-3 since 9 February 2027.
 
-Thank you for building with Nuqta Cloud.
+Thank you for building with Sudum Cloud.
 """
 
 USAGE = [
-    ["W1", "صياغة رسائل المقترضين (القبول والرفض والتذكير)", "nuqta-pro-2", "مثبّت", "لولوة الحطّاب", "شخصية: اسم المقترض والمبلغ والسبب", 4200],
-    ["W2", "إجابة أسئلة الموظفين عن سياسات الصندوق", "nuqta-pro-latest", "اسم مستعار", "ريم العكّاس", "داخلية", 9800],
+    ["W1", "صياغة رسائل المقترضين (القبول والرفض والتذكير)", "sudum-pro-2", "مثبّت", "لولوة الحطّاب", "شخصية: اسم المقترض والمبلغ والسبب", 4200],
+    ["W2", "إجابة أسئلة الموظفين عن سياسات الصندوق", "sudum-pro-latest", "اسم مستعار", "ريم العكّاس", "داخلية", 9800],
     ["W3", "«مُتابِع» من «صواب» (طرف رابع)", "غير معروف للصندوق", "غير معروف", "مهند السياري", "شخصية: اسم ورصيد ونص محادثة", 0],
-    ["W4", "تلخيص مذكرات الائتمان عند تعطل Sarid", "nuqta-pro-2", "مثبّت", "ثامر الكناني", "سرية: بيانات مالية للمنشآت", 1100],
+    ["W4", "تلخيص مذكرات الائتمان عند تعطل Sarid", "sudum-pro-2", "مثبّت", "ثامر الكناني", "سرية: بيانات مالية للمنشآت", 1100],
 ]
 
 CHANGE_POLICY = """
@@ -555,7 +555,7 @@ EVAL_CASES = [
 ]
 
 CLAUSE_TEMPLATE = """
-# بنود التغيير والخروج: خدمة نقطة السحابية
+# بنود التغيير والخروج: خدمة سُدُم السحابية
 
 لكل بند: المحفز، والمهلة، والالتزام، والدليل، والعلاج إن لم يُلتزم.
 
@@ -567,7 +567,7 @@ CLAUSE_TEMPLATE = """
 """
 
 EXIT_TEMPLATE = """
-# خطة الخروج من خدمة نقطة السحابية (صفحة واحدة)
+# خطة الخروج من خدمة سُدُم السحابية (صفحة واحدة)
 
 | | |
 |---|---|
@@ -692,7 +692,7 @@ def main() -> None:
     write("cards/mustanad-mcp.md", MUSTANAD)
     write("cards/sarid-70b-instruct.md", SARID)
     write("cards/fawatir-scans.md", FAWATIR)
-    write("terms/nuqta_cloud_terms.md", NUQTA_TERMS)
+    write("terms/sudum_cloud_terms.md", SUDUM_TERMS)
     write_csv("licence_table.csv", LICENCE_TABLE_HEAD, [[r[0], r[1], r[5]] + [""] * 8 for r in INTAKE])
 
     # lab 1.2
@@ -739,16 +739,16 @@ First release. Trained on fawatir-scans. Weights file SHA-256:
     write("review_memo_template.md", MEMO_TEMPLATE)
 
     # lab 2.1
-    write("nuqta/deprecation_notice.md", DEPRECATION)
-    write_csv("nuqta/usage_inventory.csv", ["id", "workflow", "model identifier", "pinned or alias", "owner", "data", "calls per month"], USAGE)
-    write("nuqta/athl_change_procedure.md", CHANGE_POLICY)
+    write("sudum/deprecation_notice.md", DEPRECATION)
+    write_csv("sudum/usage_inventory.csv", ["id", "workflow", "model identifier", "pinned or alias", "owner", "data", "calls per month"], USAGE)
+    write("sudum/athl_change_procedure.md", CHANGE_POLICY)
     rows = []
     n = 0
     for key, label, count, old, new in EVAL_CASES:
         for i in range(count):
             n += 1
             rows.append([f"C{n:02d}", key, label, old[i], new[i]])
-    write_csv("nuqta/eval_results.csv", ["case", "category", "category label", "nuqta-pro-2 pass", "nuqta-pro-3 pass"], rows)
+    write_csv("sudum/eval_results.csv", ["case", "category", "category label", "sudum-pro-2 pass", "sudum-pro-3 pass"], rows)
     write("clauses_template.md", CLAUSE_TEMPLATE)
     write("exit_plan_template.md", EXIT_TEMPLATE)
 

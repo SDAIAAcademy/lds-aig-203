@@ -70,10 +70,10 @@ def lab_1_1() -> None:
     ok("Sarid card shows 'Built with Llama'", "Built with Llama" in sarid, False)
     mcp = (F / "cards/mustanad-mcp.md").read_text(encoding="utf-8")
     ok("tool server under AGPL and the Fund writes a connector", ("AGPL-3.0" in mcp) and any("connector" in r["intended use at the Fund"] for r in reg), True)
-    terms = (F / "terms/nuqta_cloud_terms.md").read_text(encoding="utf-8")
-    ok("Nuqta trains on content unless Enterprise with Data Controls (5.2)", "may use Customer Content to improve and train" in terms, True)
-    ok("Nuqta processes in any region (6.1)", "processed in any region" in terms, True)
-    ok("Nuqta forbids resale (3.1)", "must not resell" in terms, True)
+    terms = (F / "terms/sudum_cloud_terms.md").read_text(encoding="utf-8")
+    ok("Sudum trains on content unless Enterprise with Data Controls (5.2)", "may use Customer Content to improve and train" in terms, True)
+    ok("Sudum processes in any region (6.1)", "processed in any region" in terms, True)
+    ok("Sudum forbids resale (3.1)", "must not resell" in terms, True)
 
 
 def run_tool(*args: str) -> subprocess.CompletedProcess:
@@ -119,7 +119,7 @@ def lab_1_3() -> None:
     ok("answers with no evidence attached", sum(1 for r in q if not r["evidence attached"].strip()), 8)
     c42 = (F / "sawab_pack/cert_iso42001.md").read_text(encoding="utf-8")
     scope = re.search(r"\*\*Scope of certification:\*\* (.+)", c42).group(1)
-    ok("ISO/IEC 42001 scope names DocSense", "DocSense" in scope, True)
+    ok("ISO/IEC 42001 scope names Sannaf", "Sannaf" in scope, True)
     ok("ISO/IEC 42001 scope names the follow-up service", ("Mutabi" in scope) or ("مُتابِع" in scope), False)
     ok("ISO/IEC 42001 accreditation stated", "not stated" not in c42, False)
     c27 = (F / "sawab_pack/cert_iso27001.md").read_text(encoding="utf-8")
@@ -134,29 +134,29 @@ def lab_1_3() -> None:
     ok("supplier evaluation run by its own product team", "فريق منتج" in ev, True)
     sub = rows("sawab_pack/subprocessors.csv")
     outside = [r["sub-processor"] for r in sub if "خارج المملكة" in r["location"]]
-    ok("sub-processor processing outside the Kingdom", outside, ["Nuqta Cloud"])
+    ok("sub-processor processing outside the Kingdom", outside, ["Sudum Cloud"])
 
 
 def lab_2_1() -> None:
     print("\nLab 2.1 · change and exit")
-    use = rows("nuqta/usage_inventory.csv")
-    ok("workflows pinned to the retiring version", [r["id"] for r in use if r["model identifier"] == "nuqta-pro-2"], ["W1", "W4"])
+    use = rows("sudum/usage_inventory.csv")
+    ok("workflows pinned to the retiring version", [r["id"] for r in use if r["model identifier"] == "sudum-pro-2"], ["W1", "W4"])
     ok("workflows on the alias", [r["id"] for r in use if r["pinned or alias"] == "اسم مستعار"], ["W2"])
     ok("workflows the Fund cannot see", [r["id"] for r in use if r["model identifier"] == "غير معروف للصندوق"], ["W3"])
-    terms = (F / "terms/nuqta_cloud_terms.md").read_text(encoding="utf-8")
+    terms = (F / "terms/sudum_cloud_terms.md").read_text(encoding="utf-8")
     notice = int(re.search(r"at least (\d+) days' notice of a retirement", terms).group(1))
-    proc = (F / "nuqta/athl_change_procedure.md").read_text(encoding="utf-8")
+    proc = (F / "sudum/athl_change_procedure.md").read_text(encoding="utf-8")
     needed = int(re.search(r"إلى الموافقة: (\d+) يومًا", proc).group(1))
     ok("provider notice in days", notice, 21)
     ok("days the Fund needs", needed, 30)
     ok("shortfall in days", needed - notice, 9)
-    ev = rows("nuqta/eval_results.csv")
+    ev = rows("sudum/eval_results.csv")
     by = defaultdict(lambda: [0, 0, 0])
     for r in ev:
         b = by[r["category"]]
         b[0] += 1
-        b[1] += int(r["nuqta-pro-2 pass"])
-        b[2] += int(r["nuqta-pro-3 pass"])
+        b[1] += int(r["sudum-pro-2 pass"])
+        b[2] += int(r["sudum-pro-3 pass"])
     ok("cases", len(ev), 40)
     ok("passes old / new", (sum(v[1] for v in by.values()), sum(v[2] for v in by.values())), (37, 34))
     ok("dialect passes old / new", tuple(by["dialect"][1:]), (9, 6))

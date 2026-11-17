@@ -6,7 +6,7 @@ Itqan Assurance Ltd certifies that the management system of
 
 has been assessed and found to conform to **ISO/IEC 42001:2023**, Information technology, Artificial intelligence, Management system.
 
-**Scope of certification:** design, development and operation of the Sawab DocSense document classification platform, including model training and monitoring for DocSense.
+**Scope of certification:** design, development and operation of the Sawab Sannaf document classification platform, including model training and monitoring for Sannaf.
 
 Certificate number: ITQ-AIMS-0417
 Initial certification: 15 May 2026
