@@ -1,5 +1,5 @@
 ﻿id,artefact,kind,publisher,intended use at the Fund,licence declared,licence text,card
-X-01,Khatt-OCR-small,model weights,khatt-lab (public model hub),read scanned invoices in loan applications,apache-2.0,https://www.apache.org/licenses/LICENSE-2.0,khatt-ocr-small/README.md
+X-01,Sutur-OCR-small,model weights,sutur-lab (public model hub),read scanned invoices in loan applications,apache-2.0,https://www.apache.org/licenses/LICENSE-2.0,sutur-ocr-small/README.md
 X-05,sahifa-parse,code library,sahifa project (public code host),extract text from PDF files,MIT,https://opensource.org/license/mit,cards/sahifa-parse.md
 X-06,mustanad-mcp,tool server,mustanad project (public code host),connect the staff assistant to the document store; the Fund will add its own connector,AGPL-3.0,https://www.gnu.org/licenses/agpl-3.0.en.html,cards/mustanad-mcp.md
 X-02,Sarid-70B-Instruct,model weights (fine-tuned),sarid-ai (public model hub),"summarise loan applications for credit analysts, on the Fund's private cloud",llama3.3,https://www.llama.com/llama3_3/license/,cards/sarid-70b-instruct.md

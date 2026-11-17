@@ -87,7 +87,7 @@ CASE_BRIEF = """
 
 | المعرّف | المكوّن | النوع | الاستخدام في الصندوق |
 |---|---|---|---|
-| X-01 | Khatt-OCR-small | نموذج مفتوح الأوزان | قراءة الفواتير الممسوحة في طلبات التمويل |
+| X-01 | Sutur-OCR-small | نموذج مفتوح الأوزان | قراءة الفواتير الممسوحة في طلبات التمويل |
 | X-02 | Sarid-70B-Instruct | نموذج لغوي مفتوح الأوزان، يعمل على السحابة الخاصة للصندوق | تلخيص طلبات التمويل لمحللي الائتمان |
 | X-03 | nuqta-pro لدى «نقطة السحابية» | نموذج مملوك مستضاف عبر واجهة برمجية | صياغة رسائل المقترضين والإجابة عن أسئلة الموظفين |
 | X-04 | «مُتابِع» من «صَواب للخدمات الذكية» | خدمة وكلاء مستضافة | تذكير المقترضين بالأقساط والرد على أسئلتهم |
@@ -102,7 +102,7 @@ CASE_BRIEF = """
 # ---------------------------------------------------------------------------------------------
 
 INTAKE = [
-    ["X-01", "Khatt-OCR-small", "model weights", "khatt-lab (public model hub)", "read scanned invoices in loan applications", "apache-2.0", "https://www.apache.org/licenses/LICENSE-2.0", "khatt-ocr-small/README.md"],
+    ["X-01", "Sutur-OCR-small", "model weights", "sutur-lab (public model hub)", "read scanned invoices in loan applications", "apache-2.0", "https://www.apache.org/licenses/LICENSE-2.0", "sutur-ocr-small/README.md"],
     ["X-05", "sahifa-parse", "code library", "sahifa project (public code host)", "extract text from PDF files", "MIT", "https://opensource.org/license/mit", "cards/sahifa-parse.md"],
     ["X-06", "mustanad-mcp", "tool server", "mustanad project (public code host)", "connect the staff assistant to the document store; the Fund will add its own connector", "AGPL-3.0", "https://www.gnu.org/licenses/agpl-3.0.en.html", "cards/mustanad-mcp.md"],
     ["X-02", "Sarid-70B-Instruct", "model weights (fine-tuned)", "sarid-ai (public model hub)", "summarise loan applications for credit analysts, on the Fund's private cloud", "llama3.3", "https://www.llama.com/llama3_3/license/", "cards/sarid-70b-instruct.md"],
@@ -267,19 +267,19 @@ LICENCE_TABLE_HEAD = ["id", "artefact", "licence or terms", "commercial use", "r
 # Lab 1.2: the model package, its mirror copy, the template
 # ---------------------------------------------------------------------------------------------
 
-KHATT_README = """
+SUTUR_README = """
 ---
 license: apache-2.0
 base_model: naqsh-ai/vision-encoder-base
 datasets:
 - fawatir-scans
-- khatt-internal-receipts
+- sutur-internal-receipts
 pipeline_tag: image-to-text
 model_version: 1.1
-publisher: khatt-lab
+publisher: sutur-lab
 ---
 
-# Khatt-OCR-small
+# Sutur-OCR-small
 
 A small model that reads printed Arabic and English text in scanned invoices and receipts.
 
@@ -290,7 +290,7 @@ Reading invoices, receipts and stamped forms in back-office workflows. Not for h
 ## Training data
 
 - fawatir-scans (public dataset hub)
-- khatt-internal-receipts: receipts collected by khatt-lab (not released)
+- sutur-internal-receipts: receipts collected by sutur-lab (not released)
 
 ## Evaluation
 
@@ -305,8 +305,8 @@ Low-resolution scans (below 150 dpi) and stamps over text reduce accuracy.
 Apache License 2.0. See `LICENSE`.
 """
 
-KHATT_LICENSE = """
-Copyright 2026 khatt-lab
+SUTUR_LICENSE = """
+Copyright 2026 sutur-lab
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -321,8 +321,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-KHATT_CONFIG = {"architecture": "KhattOCRSmall", "hidden_size": 16, "num_labels": 8, "image_size": 384, "torch_dtype": "float32"}
-KHATT_TOKENIZER = {"version": "1.0", "model": {"type": "WordLevel", "vocab": {"[PAD]": 0, "[UNK]": 1, "ف": 2, "ا": 3, "ت": 4, "و": 5, "ر": 6, "ة": 7}}}
+SUTUR_CONFIG = {"architecture": "SuturOCRSmall", "hidden_size": 16, "num_labels": 8, "image_size": 384, "torch_dtype": "float32"}
+SUTUR_TOKENIZER = {"version": "1.0", "model": {"type": "WordLevel", "vocab": {"[PAD]": 0, "[UNK]": 1, "ف": 2, "ا": 3, "ت": 4, "و": 5, "ر": 6, "ة": 7}}}
 
 MIRROR_LOADER = '''# custom_loader.py
 # Shipped by the mirror uploader. A model card that asks you to run a loader like this one
@@ -332,7 +332,7 @@ print("custom loader: nothing to do")
 '''
 
 PROV_TEMPLATE = """
-# سجل منشأ: Khatt-OCR-small
+# سجل منشأ: Sutur-OCR-small
 
 | الحقل | ما وجدته | المصدر (ملف أو أمر) | تحققت منه أم معلن فقط |
 |---|---|---|---|
@@ -696,12 +696,12 @@ def main() -> None:
     write_csv("licence_table.csv", LICENCE_TABLE_HEAD, [[r[0], r[1], r[5]] + [""] * 8 for r in INTAKE])
 
     # lab 1.2
-    pkg = FILES / "khatt-ocr-small"
+    pkg = FILES / "sutur-ocr-small"
     v10 = safetensors(SEED + 10)
     v11 = safetensors(SEED + 11)
     mirror_w = safetensors(SEED + 99)
     releases = f"""
-# Khatt-OCR-small: releases
+# Sutur-OCR-small: releases
 
 ## 1.1 (15 June 2026)
 
@@ -712,16 +712,16 @@ Minor fixes.
 First release. Trained on fawatir-scans. Weights file SHA-256:
 `{hashlib.sha256(v10).hexdigest()}`
 """
-    for folder, weights, extra in ((pkg, v11, False), (FILES / "mirror" / "khatt-ocr-small", mirror_w, True)):
+    for folder, weights, extra in ((pkg, v11, False), (FILES / "mirror" / "sutur-ocr-small", mirror_w, True)):
         folder.mkdir(parents=True, exist_ok=True)
-        readme = KHATT_README
+        readme = SUTUR_README
         if extra:
-            readme = readme.replace("# Khatt-OCR-small\n", "# Khatt-OCR-small\n\nFast mirror of khatt-lab/Khatt-OCR-small, same model, quicker download. Load with `trust_remote_code=True`.\n")
+            readme = readme.replace("# Sutur-OCR-small\n", "# Sutur-OCR-small\n\nFast mirror of sutur-lab/Sutur-OCR-small, same model, quicker download. Load with `trust_remote_code=True`.\n")
         (folder / "README.md").write_bytes(readme.strip("\n").encode("utf-8") + b"\n")
-        (folder / "LICENSE").write_bytes(KHATT_LICENSE.strip("\n").encode("utf-8") + b"\n")
+        (folder / "LICENSE").write_bytes(SUTUR_LICENSE.strip("\n").encode("utf-8") + b"\n")
         (folder / "RELEASES.md").write_bytes(releases.strip("\n").encode("utf-8") + b"\n")
-        (folder / "config.json").write_bytes((json.dumps(KHATT_CONFIG, indent=2) + "\n").encode("utf-8"))
-        (folder / "tokenizer.json").write_bytes((json.dumps(KHATT_TOKENIZER, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
+        (folder / "config.json").write_bytes((json.dumps(SUTUR_CONFIG, indent=2) + "\n").encode("utf-8"))
+        (folder / "tokenizer.json").write_bytes((json.dumps(SUTUR_TOKENIZER, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
         (folder / "model.safetensors").write_bytes(weights)
         if extra:
             (folder / "custom_loader.py").write_bytes(MIRROR_LOADER.encode("utf-8"))

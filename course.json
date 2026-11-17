@@ -564,7 +564,7 @@
           "url": "https://docs.claude.com/en/docs/about-claude/model-deprecations"
         },
         {
-          "title": "Google Cloud Vertex AI: Model versions and lifecycle",
+          "title": "Google Cloud (Gemini Enterprise Agent Platform): Model versions and lifecycle",
           "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions"
         },
         {

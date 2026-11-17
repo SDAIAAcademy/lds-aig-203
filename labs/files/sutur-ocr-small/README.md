@@ -3,15 +3,13 @@ license: apache-2.0
 base_model: naqsh-ai/vision-encoder-base
 datasets:
 - fawatir-scans
-- khatt-internal-receipts
+- sutur-internal-receipts
 pipeline_tag: image-to-text
 model_version: 1.1
-publisher: khatt-lab
+publisher: sutur-lab
 ---
 
-# Khatt-OCR-small
-
-Fast mirror of khatt-lab/Khatt-OCR-small, same model, quicker download. Load with `trust_remote_code=True`.
+# Sutur-OCR-small
 
 A small model that reads printed Arabic and English text in scanned invoices and receipts.
 
@@ -22,7 +20,7 @@ Reading invoices, receipts and stamped forms in back-office workflows. Not for h
 ## Training data
 
 - fawatir-scans (public dataset hub)
-- khatt-internal-receipts: receipts collected by khatt-lab (not released)
+- sutur-internal-receipts: receipts collected by sutur-lab (not released)
 
 ## Evaluation
 

@@ -1,5 +1,5 @@
 {
-  "architecture": "KhattOCRSmall",
+  "architecture": "SuturOCRSmall",
   "hidden_size": 16,
   "num_labels": 8,
   "image_size": 384,

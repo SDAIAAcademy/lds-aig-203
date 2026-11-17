@@ -9,12 +9,12 @@ Three commands, run from the folder labs/:
   uv run tools/provenance.py check
       proves the tool runs (prints the versions it uses)
 
-  uv run tools/provenance.py bom files/khatt-ocr-small
+  uv run tools/provenance.py bom files/sutur-ocr-small
       reads the model card (README.md) and every file of the package, and writes a
       CycloneDX machine-learning bill of materials (specVersion 1.6) next to the package:
-      files/khatt-ocr-small.cdx.json. It prints what the card declares and what it leaves out.
+      files/sutur-ocr-small.cdx.json. It prints what the card declares and what it leaves out.
 
-  uv run tools/provenance.py verify files/khatt-ocr-small
+  uv run tools/provenance.py verify files/sutur-ocr-small
       verifies the publisher's signature over the whole folder with the OpenSSF
       model_signing library (key-based, offline). The signature and the public key are in
       files/signatures/. Add --signature and --key to use other files.
@@ -71,7 +71,7 @@ def cmd_check(_args) -> int:
     import importlib.metadata as md
     print("python", sys.version.split()[0])
     print("model-signing", md.version("model-signing"))
-    print("ready: run 'bom' and 'verify' on files/khatt-ocr-small")
+    print("ready: run 'bom' and 'verify' on files/sutur-ocr-small")
     return 0
 
 
@@ -151,8 +151,8 @@ def cmd_bom(args) -> int:
 def cmd_verify(args) -> int:
     folder = Path(args.folder)
     files_dir = Path(__file__).resolve().parent.parent / "files" / "signatures"
-    sig = Path(args.signature) if args.signature else files_dir / "khatt-ocr-small.sig"
-    key = Path(args.key) if args.key else files_dir / "khatt-lab.pub"
+    sig = Path(args.signature) if args.signature else files_dir / "sutur-ocr-small.sig"
+    key = Path(args.key) if args.key else files_dir / "sutur-lab.pub"
     print(f"folder     {folder.as_posix()}")
     print(f"signature  {sig.name}")
     print(f"public key {key.name}")

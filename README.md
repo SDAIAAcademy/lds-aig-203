@@ -140,7 +140,7 @@ Third-Party AI: Licences, Supply Chain and Retirement
 ### دورة حياة النماذج المستضافة
 
 - [Anthropic: Model deprecations](https://docs.claude.com/en/docs/about-claude/model-deprecations)
-- [Google Cloud Vertex AI: Model versions and lifecycle](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)
+- [Google Cloud (Gemini Enterprise Agent Platform): Model versions and lifecycle](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/model-versions)
 - [OpenAI: Deprecations](https://platform.openai.com/docs/deprecations)
 <!-- /academy:sources -->
 

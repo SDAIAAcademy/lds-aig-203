@@ -1,4 +1,4 @@
-# Khatt-OCR-small: releases
+# Sutur-OCR-small: releases
 
 ## 1.1 (15 June 2026)
 

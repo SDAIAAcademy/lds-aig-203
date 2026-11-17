@@ -82,9 +82,9 @@ def run_tool(*args: str) -> subprocess.CompletedProcess:
 
 def lab_1_2() -> None:
     print("\nLab 1.2 · provenance (runs the tool for real)")
-    pkg = F / "khatt-ocr-small"
+    pkg = F / "sutur-ocr-small"
     meta = front_matter((pkg / "README.md").read_text(encoding="utf-8"))
-    ok("declared datasets", meta["datasets"], ["fawatir-scans", "khatt-internal-receipts"])
+    ok("declared datasets", meta["datasets"], ["fawatir-scans", "sutur-internal-receipts"])
     ok("declared base model", meta["base_model"], "naqsh-ai/vision-encoder-base")
     rel = (pkg / "RELEASES.md").read_text(encoding="utf-8")
     v10 = re.search(r"`([0-9a-f]{64})`", rel).group(1)
@@ -93,7 +93,7 @@ def lab_1_2() -> None:
     ok("1.0 notes name one dataset, the card of 1.1 names two", ("Trained on fawatir-scans." in rel) and len(meta["datasets"]) == 2, True)
     with tempfile.TemporaryDirectory() as tmp:
         out = Path(tmp) / "bom.json"
-        r = run_tool("bom", "files/khatt-ocr-small", "--out", str(out))
+        r = run_tool("bom", "files/sutur-ocr-small", "--out", str(out))
         ok("bom command exit code", r.returncode, 0)
         bom = json.loads(out.read_text(encoding="utf-8"))
         comp = bom["metadata"]["component"]
@@ -102,9 +102,9 @@ def lab_1_2() -> None:
         ok("BOM weights hash equals the file", comp["hashes"][0]["content"], now)
         ok("BOM base model in pedigree", comp["pedigree"]["ancestors"][0]["name"], "naqsh-ai/vision-encoder-base")
         ok("BOM datasets carry no licence", all("licenses" not in c for c in bom["components"] if c["type"] == "data"), True)
-    r = run_tool("verify", "files/khatt-ocr-small")
+    r = run_tool("verify", "files/sutur-ocr-small")
     ok("official package signature", r.returncode, 0)
-    r = run_tool("verify", "files/mirror/khatt-ocr-small")
+    r = run_tool("verify", "files/mirror/sutur-ocr-small")
     ok("mirror signature fails", r.returncode, 1)
     changed = sorted(re.findall(r"file changed after signing: (\S+)", r.stdout))
     extra = re.findall(r"file not in the signed package: (\S+)", r.stdout)
