@@ -1,12 +1,12 @@
-# Certificate of registration (copy supplied by Lamah)
+# Certificate of registration (copy supplied by Sawab)
 
 Northbridge Certification certifies that the information security management system of
 
-**Lamah AI Services**, Riyadh
+**Sawab AI Services**, Riyadh
 
 conforms to **ISO/IEC 27001:2022**.
 
-**Scope of certification:** the information security management system for the hosting, operation and support of all Lamah cloud services delivered from the Lamah Riyadh data centre, in accordance with the Statement of Applicability version 3.
+**Scope of certification:** the information security management system for the hosting, operation and support of all Sawab cloud services delivered from the Sawab Riyadh data centre, in accordance with the Statement of Applicability version 3.
 
 Certificate number: NB-27K-22981
 Initial certification: 2 February 2025

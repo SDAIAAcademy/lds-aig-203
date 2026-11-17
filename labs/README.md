@@ -21,7 +21,7 @@ uv run tools/provenance.py check
 |---|---|---|
 | 1.1 جدول التراخيص الستة | `D1_1_licences.html` | `files/intake_register.csv`، `files/cards/`، `files/terms/`، `files/licence_table.csv` |
 | 1.2 سجل منشأ نموذج مفتوح الأوزان | `D1_2_provenance.html` | `files/khatt-ocr-small/`، `files/mirror/`، `files/signatures/`، `tools/provenance.py` |
-| 1.3 مذكرة مراجعة ضمان المورِّد | `D1_3_assurance.html` | `files/lamah_pack/`، `files/review_memo_template.md` |
+| 1.3 مذكرة مراجعة ضمان المورِّد | `D1_3_assurance.html` | `files/sawab_pack/`، `files/review_memo_template.md` |
 | 2.1 بنود التغيير وخطة الخروج | `D2_1_exit.html` | `files/nuqta/`، `files/terms/`، `files/clauses_template.md`، `files/exit_plan_template.md` |
 | 2.2 خطة إيقاف نموذج القرار الائتماني | `D2_2_retirement.html` | `files/cdm/`، `files/retirement_plan_template.md` |
 

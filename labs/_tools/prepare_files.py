@@ -90,11 +90,11 @@ CASE_BRIEF = """
 | X-01 | Khatt-OCR-small | نموذج مفتوح الأوزان | قراءة الفواتير الممسوحة في طلبات التمويل |
 | X-02 | Sarid-70B-Instruct | نموذج لغوي مفتوح الأوزان، يعمل على السحابة الخاصة للصندوق | تلخيص طلبات التمويل لمحللي الائتمان |
 | X-03 | nuqta-pro لدى «نقطة السحابية» | نموذج مملوك مستضاف عبر واجهة برمجية | صياغة رسائل المقترضين والإجابة عن أسئلة الموظفين |
-| X-04 | «مُتابِع» من «لَمْح للخدمات الذكية» | خدمة وكلاء مستضافة | تذكير المقترضين بالأقساط والرد على أسئلتهم |
+| X-04 | «مُتابِع» من «صَواب للخدمات الذكية» | خدمة وكلاء مستضافة | تذكير المقترضين بالأقساط والرد على أسئلتهم |
 | X-05 | sahifa-parse | مكتبة برمجية | استخراج النص من ملفات PDF |
 | X-06 | mustanad-mcp | خادم أدوات (Model Context Protocol) | ربط المساعد الداخلي بمخزن المستندات |
 | X-07 | fawatir-scans | مجموعة بيانات | ضبط نموذج قراءة الفواتير مستقبلًا |
-| I-01 | Athl-CDM v3 | نموذج قرار ائتماني بنته «قرار للتحليلات» ويستضيفه الصندوق | توصية بالقبول أو الرفض لكل طلب |
+| I-01 | Athl-CDM v3 | نموذج قرار ائتماني بنته «ثبات للتحليلات» ويستضيفه الصندوق | توصية بالقبول أو الرفض لكل طلب |
 """
 
 # ---------------------------------------------------------------------------------------------
@@ -358,13 +358,13 @@ PROV_TEMPLATE = """
 """
 
 # ---------------------------------------------------------------------------------------------
-# Lab 1.3: Lamah's response pack for the Mutabi' service
+# Lab 1.3: Sawab's response pack for the Mutabi' service
 # ---------------------------------------------------------------------------------------------
 
-LAMAH_INDEX = """
-# حزمة ردود «لَمْح للخدمات الذكية»: خدمة «مُتابِع»
+SAWAB_INDEX = """
+# حزمة ردود «صَواب للخدمات الذكية»: خدمة «مُتابِع»
 
-أرسلها مدير حسابات لمح إلى مهند السياري في فبراير 2027 ردًا على طلب الصندوق. ترقيم الأدلة من المورِّد.
+أرسلها مدير حسابات «صواب» إلى مهند السياري في فبراير 2027 ردًا على طلب الصندوق. ترقيم الأدلة من المورِّد.
 
 | الدليل | الملف | ما يقول المورِّد إنه يثبته |
 |---|---|---|
@@ -377,17 +377,17 @@ LAMAH_INDEX = """
 | E7 | جواب السؤال Q12 في الاستبانة | اعتماد مقدمي خدمات الذكاء الاصطناعي على منصة حوكمة البيانات الوطنية |
 """
 
-LAMAH_SERVICE = """
+SAWAB_SERVICE = """
 # «مُتابِع»: وصف الخدمة
 
-«مُتابِع» خدمة وكلاء مستضافة تقدمها شركة لَمْح للخدمات الذكية. يتصل الوكيل بنظام القروض لدى العميل
+«مُتابِع» خدمة وكلاء مستضافة تقدمها شركة صَواب للخدمات الذكية. يتصل الوكيل بنظام القروض لدى العميل
 عبر واجهة برمجية، ويرسل للمقترضين تذكيرات الأقساط برسائل نصية وعبر تطبيقات المحادثة، ويجيب عن أسئلتهم
 عن الرصيد والموعد، ويحوّل الحالات الصعبة إلى موظف.
 
 - البيانات التي يعالجها: اسم المقترض، ورقم جواله، والرصيد المستحق، وتاريخ القسط، ونطاق درجة الائتمان، ونص المحادثة.
 - النموذج اللغوي: نموذج مستضاف لدى مزوّد خارجي (انظر قائمة الأطراف من الباطن).
-- الاستضافة: منصة لمح في مركز بيانات بالرياض.
-- منتجات لمح الأخرى: «DocSense» لتصنيف المستندات، وبوابة العملاء.
+- الاستضافة: منصة «صواب» في مركز بيانات بالرياض.
+- منتجات «صواب» الأخرى: «DocSense» لتصنيف المستندات، وبوابة العملاء.
 """
 
 QUESTIONNAIRE = [
@@ -402,26 +402,26 @@ QUESTIONNAIRE = [
     ["Q09", "السجلات", "هل تُحفظ سجلات المحادثات والقرارات، وكم مدة حفظها، وهل يطلع عليها العميل؟", "نعم، 90 يومًا", ""],
     ["Q10", "الحوادث", "خلال كم من الوقت تُبلغون العميل بحادثة أمنية أو حادثة تمس بياناته؟", "في أقرب وقت ممكن", ""],
     ["Q11", "الاختبار الأمني", "متى أُجري آخر اختبار اختراق خارجي، وما نطاقه؟", "أُجري اختبار خارجي من شركة مستقلة", "E5"],
-    ["Q12", "الاعتماد", "هل الخدمة معتمدة أو مسجلة لدى جهة وطنية؟", "نعم، لمح معتمدة مقدمَ خدمات ذكاء اصطناعي على منصة حوكمة البيانات الوطنية", ""],
+    ["Q12", "الاعتماد", "هل الخدمة معتمدة أو مسجلة لدى جهة وطنية؟", "نعم، «صواب» معتمدة مقدمَ خدمات ذكاء اصطناعي على منصة حوكمة البيانات الوطنية", ""],
     ["Q13", "الشهادات", "اذكروا شهادات أنظمة الإدارة ونطاق كل منها", "ISO/IEC 42001 وISO/IEC 27001", "E2, E3"],
     ["Q14", "الخروج", "كيف تُعاد بيانات العميل عند انتهاء العقد، وكيف تُمحى؟", "تُمحى خلال 60 يومًا من انتهاء العقد", ""],
 ]
 
 CERT_42001 = """
-# Certificate of registration (copy supplied by Lamah)
+# Certificate of registration (copy supplied by Sawab)
 
 Itqan Assurance Ltd certifies that the management system of
 
-**Lamah AI Services**, Riyadh
+**Sawab AI Services**, Riyadh
 
 has been assessed and found to conform to **ISO/IEC 42001:2023**, Information technology, Artificial intelligence, Management system.
 
-**Scope of certification:** design, development and operation of the Lamah DocSense document classification platform, including model training and monitoring for DocSense.
+**Scope of certification:** design, development and operation of the Sawab DocSense document classification platform, including model training and monitoring for DocSense.
 
 Certificate number: ITQ-AIMS-0417
 Initial certification: 15 May 2026
 Valid until: 14 May 2029, subject to annual surveillance audits
-Site: Lamah AI Services head office, Riyadh
+Site: Sawab AI Services head office, Riyadh
 
 Accreditation: not stated on this certificate.
 
@@ -429,15 +429,15 @@ Itqan Assurance Ltd is a fictional certification body, invented for this course.
 """
 
 CERT_27001 = """
-# Certificate of registration (copy supplied by Lamah)
+# Certificate of registration (copy supplied by Sawab)
 
 Northbridge Certification certifies that the information security management system of
 
-**Lamah AI Services**, Riyadh
+**Sawab AI Services**, Riyadh
 
 conforms to **ISO/IEC 27001:2022**.
 
-**Scope of certification:** the information security management system for the hosting, operation and support of all Lamah cloud services delivered from the Lamah Riyadh data centre, in accordance with the Statement of Applicability version 3.
+**Scope of certification:** the information security management system for the hosting, operation and support of all Sawab cloud services delivered from the Sawab Riyadh data centre, in accordance with the Statement of Applicability version 3.
 
 Certificate number: NB-27K-22981
 Initial certification: 2 February 2025
@@ -449,11 +449,11 @@ Northbridge Certification and Northbridge Accreditation Service are fictional bo
 """
 
 EVAL_SUMMARY = """
-# ملخص تقييم «مُتابِع» (من لمح)
+# ملخص تقييم «مُتابِع» (من «صواب»)
 
-أجرى فريق منتج «مُتابِع» في لمح التقييم في الربع الثاني من 2026.
+أجرى فريق منتج «مُتابِع» في «صواب» التقييم في الربع الثاني من 2026.
 
-- مجموعة الاختبار: 200 محادثة من عملاء لمح الحاليين، اختارها الفريق نفسه.
+- مجموعة الاختبار: 200 محادثة من عملاء «صواب» الحاليين، اختارها الفريق نفسه.
 - المقياس: «نجاح المهمة»، أي أن المقترض حصل على الجواب الصحيح أو حُوّل إلى موظف.
 - النتيجة: نجاح المهمة 94%.
 - الحكم على كل محادثة: مراجع من فريق المنتج.
@@ -466,7 +466,7 @@ PENTEST = """
 
 إلى من يهمه الأمر،
 
-أجرت شركة «دِرع للاختبارات الأمنية» (جهة افتراضية) اختبار اختراق لبوابة عملاء لمح على الإنترنت
+أجرت شركة «حِصن للاختبارات الأمنية» (جهة افتراضية) اختبار اختراق لبوابة عملاء «صواب» على الإنترنت
 بين 3 و14 أغسطس 2025. لم تُكتشف ثغرات حرجة، وأُغلقت الثغرتان المتوسطتان المكتشفتان.
 
 نطاق الاختبار: بوابة العملاء على الويب. خارج النطاق: الواجهات البرمجية للخدمات، وخدمة «مُتابِع».
@@ -477,15 +477,15 @@ PENTEST = """
 SUBPROCESSORS = [
     ["Nuqta Cloud", "استدعاء النموذج اللغوي (نص المحادثة، اسم المقترض، الرصيد)", "eu-central (خارج المملكة)، ومنطقة احتياطية حسب السعة", "منذ 2025"],
     ["Rasil SMS (جهة افتراضية)", "إرسال الرسائل النصية (رقم الجوال، نص الرسالة)", "الرياض", "منذ 2024"],
-    ["Lamah Riyadh data centre", "التخزين والتشغيل", "الرياض", "منذ 2023"],
+    ["Sawab Riyadh data centre", "التخزين والتشغيل", "الرياض", "منذ 2023"],
 ]
 
 MEMO_TEMPLATE = """
-# مذكرة مراجعة ضمان المورِّد: «مُتابِع» من لمح
+# مذكرة مراجعة ضمان المورِّد: «مُتابِع» من «صواب»
 
 إلى: مهند السياري، ريم العكّاس
 من:
-الموضوع: مراجعة حزمة ردود لمح قبل التعاقد
+الموضوع: مراجعة حزمة ردود «صواب» قبل التعاقد
 
 ## 1. تقدير الأدلة
 
@@ -533,7 +533,7 @@ Thank you for building with Nuqta Cloud.
 USAGE = [
     ["W1", "صياغة رسائل المقترضين (القبول والرفض والتذكير)", "nuqta-pro-2", "مثبّت", "لولوة الحطّاب", "شخصية: اسم المقترض والمبلغ والسبب", 4200],
     ["W2", "إجابة أسئلة الموظفين عن سياسات الصندوق", "nuqta-pro-latest", "اسم مستعار", "ريم العكّاس", "داخلية", 9800],
-    ["W3", "«مُتابِع» من لمح (طرف رابع)", "غير معروف للصندوق", "غير معروف", "مهند السياري", "شخصية: اسم ورصيد ونص محادثة", 0],
+    ["W3", "«مُتابِع» من «صواب» (طرف رابع)", "غير معروف للصندوق", "غير معروف", "مهند السياري", "شخصية: اسم ورصيد ونص محادثة", 0],
     ["W4", "تلخيص مذكرات الائتمان عند تعطل Sarid", "nuqta-pro-2", "مثبّت", "ثامر الكناني", "سرية: بيانات مالية للمنشآت", 1100],
 ]
 
@@ -589,7 +589,7 @@ CDM_REGISTER = """
 | الحقل | القيمة |
 |---|---|
 | الغرض | توصية بالقبول أو الرفض لكل طلب تمويل، مع ثلاثة أسباب مرمّزة تُطبع في رسالة القرار |
-| المطوّر | «قرار للتحليلات» بعقد مع الصندوق في 2023؛ العقد انتهى في 2025 والصيانة الآن داخلية |
+| المطوّر | «ثبات للتحليلات» بعقد مع الصندوق في 2023؛ العقد انتهى في 2025 والصيانة الآن داخلية |
 | المالك | ثامر الكناني |
 | في الإنتاج منذ | يناير 2024 |
 | مستوى المخاطر | عالٍ: قرار له أثر مالي على المنشآت ومالكيها |
@@ -604,7 +604,7 @@ DEPENDENCIES = [
     ["collections-batch", "مهمة ترتيب أولويات التحصيل الليلية", "تقرأ نطاق الدرجة لكل قرض قائم", "إدارة التحصيل"],
     ["board-report", "لوحة مخاطر الائتمان الشهرية لمجلس الإدارة", "تقرأ توزيع الدرجات", "إدارة المخاطر"],
     ["reg-extract", "مستخرج التقارير الرقابية الفصلية", "يقرأ القرارات وأسبابها", "الالتزام"],
-    ["mutabi-lamah", "«مُتابِع» من لمح", "يقرأ نطاق الدرجة ليختار نبرة التذكير", "مهند السياري"],
+    ["mutabi-sawab", "«مُتابِع» من «صواب»", "يقرأ نطاق الدرجة ليختار نبرة التذكير", "مهند السياري"],
     ["appeals-desk", "مكتب التظلمات", "يعيد عرض أسباب القرار للمقترض المتظلم", "لولوة الحطّاب"],
 ]
 
@@ -670,7 +670,7 @@ def build_logs(rng: random.Random):
         "collections-batch": lambda d, wd: 1,
         "board-report": lambda d, wd: 1 if d in (5, 35, 65) else 0,
         "reg-extract": lambda d, wd: 1 if d == 40 else 0,
-        "mutabi-lamah": lambda d, wd: rng.randint(30, 60),
+        "mutabi-sawab": lambda d, wd: rng.randint(30, 60),
         "east-branch-sheet": lambda d, wd: 0 if wd >= 5 else rng.randint(3, 7),
     }
     for day in range(1, 91):
@@ -728,14 +728,14 @@ First release. Trained on fawatir-scans. Weights file SHA-256:
     write("provenance_record_template.md", PROV_TEMPLATE)
 
     # lab 1.3
-    write("lamah_pack/00_index.md", LAMAH_INDEX)
-    write("lamah_pack/service_description.md", LAMAH_SERVICE)
-    write_csv("lamah_pack/questionnaire.csv", ["id", "domain", "question", "supplier answer", "evidence attached"], QUESTIONNAIRE)
-    write("lamah_pack/cert_iso42001.md", CERT_42001)
-    write("lamah_pack/cert_iso27001.md", CERT_27001)
-    write("lamah_pack/evaluation_summary.md", EVAL_SUMMARY)
-    write("lamah_pack/pentest_letter.md", PENTEST)
-    write_csv("lamah_pack/subprocessors.csv", ["sub-processor", "what it processes", "location", "since"], SUBPROCESSORS)
+    write("sawab_pack/00_index.md", SAWAB_INDEX)
+    write("sawab_pack/service_description.md", SAWAB_SERVICE)
+    write_csv("sawab_pack/questionnaire.csv", ["id", "domain", "question", "supplier answer", "evidence attached"], QUESTIONNAIRE)
+    write("sawab_pack/cert_iso42001.md", CERT_42001)
+    write("sawab_pack/cert_iso27001.md", CERT_27001)
+    write("sawab_pack/evaluation_summary.md", EVAL_SUMMARY)
+    write("sawab_pack/pentest_letter.md", PENTEST)
+    write_csv("sawab_pack/subprocessors.csv", ["sub-processor", "what it processes", "location", "since"], SUBPROCESSORS)
     write("review_memo_template.md", MEMO_TEMPLATE)
 
     # lab 2.1
