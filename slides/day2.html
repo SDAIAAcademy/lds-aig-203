@@ -1,89 +1,327 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>نصف يوم بجلستين: التغيير والخروج، ثم الإيقاف. الجلسة الثانية أطول لأن مختبرها ينتهي بمجلس تغيير صوري.</p><p>ابدأ بسؤال: من تلقى في جهته رسالة «سنوقف هذا النموذج في تاريخ كذا»؟ كم كانت المهلة؟</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>الخيط: خطط للخروج قبل الدخول، والإيقاف تغيير محكوم. نبدأ بمراجعة قصيرة لليوم الأول.</p></aside>
+</section>
+
+<section class="slide" id="review-day1" data-label="مراجعة اليوم الأول" data-lo="LO1 LO2">
+  <div class="kicker">مراجعة اليوم الأول</div>
+  <h2>البطاقة تقول شيئًا والملف يقول آخر</h2>
+  <div class="quiz" data-type="single" data-lo="LO1 LO2">
+    <p class="lead">مكتبة لقراءة الجداول يريد فريق في جهتك تضمينها في تطبيق يبيعه. رأس بطاقتها يقول <span class="ltr">MIT</span>، وملف الترخيص في مستودعها نص <span class="en">GPL-3.0</span>. ماذا تسجّل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يعطي الأولوية لما تعرضه المنصة، والملزم هو نص الترخيص المرفق">MIT، لأن رأس البطاقة هو ما تعرضه المنصة للجميع</div>
+      <div class="opt" data-ok>GPL-3.0 حتى يُستوضح، مع تسجيل التعارض سؤالًا للناشر</div>
+      <div class="opt" data-why="يرى في التعارض إبطالًا للترخيصين، والقاعدة العمل بالأكثر تقييدًا">لا ترخيص، فالتعارض يبطل الترخيصين معًا</div>
+      <div class="opt" data-why="يظن أن البيع خارج نطاق الترخيصين، وكلاهما يسمح بالاستخدام التجاري">الاثنان معًا، ويختار الفريق أيهما يناسب البيع</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> عند التعارض يُعمل بالأكثر تقييدًا، وهو هنا الترخيص الذي يفرض شروطه على التوزيع، ويُسأل الناشر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. القاعدة من شريحة «للترخيص ثلاثة مواضع» أمس. من اختار «أ» يحتاج تذكيرًا بأن رأس البطاقة يملؤه الناشر بيده.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
+<section class="slide" id="silent-updates" data-lo="LO4">
+  <div class="kicker">تحديثات صامتة</div>
+  <h2>الاسم المستعار يتغير تحتك، والإصدار المثبّت يتوقف في موعده</h2>
   <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+    <div class="card c-coral"><h4>اسم مستعار، مثل <code>…-latest</code></h4><p class="small mb0">يختار المزوّد ما يشير إليه ويغيّره متى شاء. لا يتوقف، لكنه لا يبقى هو نفسه.</p></div>
+    <div class="card c-teal"><h4>إصدار مثبّت بتاريخ</h4><p class="small mb0">يبقى هو نفسه، ثم يُعلن إيقافه ويتوقف في تاريخ محدد.</p></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="flow mt">
+    <div class="step c-teal"><b>نشط</b>يعمل ويُدعم</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>معلن إيقافه</b>يعمل حتى تاريخ محدد</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>موقوف</b>كل طلب إليه يفشل</div>
+  </div>
+  <aside class="notes"><p>الاسم المستعار مريح في التجربة وخطِر في الإنتاج: النموذج يتغير دون أن يمر بإجراء التغيير. القاعدة في الاستخدامات عالية الأثر: إصدار مثبّت، وتحويل مقصود.</p><p>المراحل الثلاث بأسماء تختلف قليلًا بين المزوّدين، والمعنى واحد.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="notice-practices" data-lo="LO4">
+  <div class="kicker">ممارسات المزوّدين</div>
+  <h2>مهلة الإيقاف تختلف بين المزوّدين وبين فئات النماذج: اقرأ مهلتك</h2>
+  <table class="t">
+    <tr><th>المزوّد</th><th>ما تنص عليه صفحته الرسمية</th></tr>
+    <tr><td><span class="en">Anthropic</span></td><td>إشعار لا يقل عن 60 يومًا قبل إيقاف النماذج المطروحة للعموم، للعملاء الذين يستخدمونها</td></tr>
+    <tr><td><span class="en">Google Vertex AI</span></td><td>النماذج المتاحة عمومًا تبقى 12 شهرًا على الأقل بعد طرحها؛ ونماذج الإتاحة القصيرة تُعطى 45 يومًا على الأقل للانتقال</td></tr>
+    <tr><td><span class="en">OpenAI</span></td><td>صفحة إيقافات تذكر لكل نموذج تاريخ الإشعار وتاريخ الإيقاف والبديل الموصى به</td></tr>
+  </table>
+  <div class="callout warn mt"><b>المنصة الوسيطة لها جدولها.</b> النموذج نفسه عبر منصة سحابية شريكة قد يُوقف في تاريخ مختلف عن تاريخ صانعه.</div>
+  <aside class="notes"><p>الأرقام من الصفحات الرسمية كما قُرئت في نوفمبر 2026، وهي من البنود التي تتغير: راجعها قبل كل دفعة. صفحة Anthropic تذكر أيضًا أن المنصات التي يشغّلها شركاء تضع تواريخ إيقافها الخاصة.</p><p>المصادر: Anthropic، Model deprecations؛ Google Cloud، Vertex AI model versions and lifecycle؛ OpenAI، Deprecations.</p></aside>
+</section>
+
+<section class="slide" id="reevaluate" data-lo="LO4">
+  <div class="kicker">التقييم عند التغيير</div>
+  <h2>كل تغيير في النموذج تغيير في نظامك، فيمر بمجموعة اختبارك</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>مجموعة حالات تملكها الجهة ولا يراها المزوّد</li>
+      <li>نتائج حسب الفئة، لا متوسط واحد يخفي التراجع</li>
+      <li>عتبة قبول مكتوبة قبل رؤية النتائج</li>
+      <li>صاحب قرار يقبل الفرق أو يرفضه كتابيًا</li>
+    </ul>
+    <div class="card tint c-navy"><h4>مثال: مساعد خدمة عملاء لشركة طرود</h4><p class="small mb0">المتوسط تحسن نقطتين بعد التغيير، وفئة «شكاوى التلف» تراجعت عشر نقاط. المتوسط وحده كان سيمرر التغيير.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>المثال افتراضي. بناء مجموعة الاختبار نفسها وتقييم نموذجين بها موضوع LDS-EXE-205؛ هنا نكتب الحق في استخدامها قبل الانتقال.</p></aside>
+</section>
+
+<section class="slide" id="clause-anatomy" data-lo="LO4">
+  <div class="kicker">تشريح البند</div>
+  <h2>البند الذي يُنفَّذ له محفز ومهلة والتزام ودليل وعلاج</h2>
+  <table class="t">
+    <tr><th>الجزء</th><th>مثال: خدمة قراءة مستندات لشركة طرود</th></tr>
+    <tr><td>المحفز</td><td>أي تغيير في النموذج أو في سياسة السلامة أو إيقاف إصدار</td></tr>
+    <tr><td>المهلة</td><td>قبل 40 يومًا، وهي مدة إجراء التغيير لدى الشركة مع هامش</td></tr>
+    <tr><td>الالتزام</td><td>إشعار مكتوب بوصف التغيير، وإبقاء الإصدار الحالي حتى تنقضي المهلة</td></tr>
+    <tr><td>الدليل</td><td>نتائج المزوّد على التغيير، وبيئة يختبر فيها المشتري</td></tr>
+    <tr><td>العلاج</td><td>إن قصرت المهلة، يبقى الإصدار القديم دون تكلفة حتى تكتمل</td></tr>
+  </table>
+  <aside class="notes"><p>اسأل: من أين جاء رقم 40؟ من إجراء التغيير في الشركة. البند الذي يحمل رقمًا مستديرًا بلا سبب يسقط عند أول تفاوض. التفاوض نفسه في LDS-EXE-205.</p></aside>
+</section>
+
+<section class="slide" id="portability" data-lo="LO4">
+  <div class="kicker">قابلية النقل</div>
+  <h2>ما يحبسك عند المزوّد ليس العقد وحده</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>صيغ خاصة:</b> بيانات تُصدَّر بصيغة لا يقرؤها غير المزوّد</li>
+      <li><b>أوامر مضبوطة على نموذج:</b> تعمل عليه وتفشل على غيره</li>
+      <li><b>أوزان مضبوطة عنده:</b> دفعت ثمن ضبطها ولا تملكها</li>
+      <li><b>متجهات تضمين:</b> لا تُستخدم مع نموذج تضمين آخر</li>
+      <li><b>طرف رابع:</b> مورِّدك يعتمد على مزوّد لا عقد لك معه</li>
+    </ul>
+    <div class="card c-amber"><h4>سؤال قبل التوقيع</h4><p class="small mb0">لو انتهى العقد غدًا، ما الذي يبقى بين يديك، وكم يومًا يلزمك لتعمل بدونه؟</p></div>
+  </div>
+  <aside class="notes"><p>اطلب من القاعة اختيار بند واحد يخص جهاتها. أوامر النظام المضبوطة على نموذج بعينه أكثر ما يُنسى، لأنها لا تظهر في أي عقد.</p></aside>
+</section>
+
+<section class="slide" id="data-return" data-lo="LO4">
+  <div class="kicker">إعادة البيانات ومحوها</div>
+  <h2>بند الخروج يحدد الصيغة والمدة والدليل</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الصيغة</h4><p class="small mb0">صيغة مفتوحة موثقة يقرؤها نظامك أو بديلك، لا صيغة المزوّد وحده.</p></div>
+    <div class="card c-cyan"><h4>المدة</h4><p class="small mb0">وقت كافٍ للتصدير والتحقق، مع مساعدة في الانتقال.</p></div>
+    <div class="card c-purple"><h4>الدليل</h4><p class="small mb0">تأكيد مكتوب بالمحو من كل المواقع والنسخ الاحتياطية.</p></div>
+  </div>
+  <div class="callout note mt"><b>الضوابط الأساسية للأمن السيبراني.</b> عقود الأطراف الخارجية تتضمن الإزالة الآمنة لبيانات الجهة عند انتهاء الخدمة، وخدمات السحابة تعيد البيانات بصيغة قابلة للاستخدام.</div>
+  <aside class="notes"><p>الضوابط 4-1-2 (البند الفرعي الأول: عدم الإفصاح والإزالة الآمنة للبيانات عند انتهاء الخدمة) و4-2-3 (البند الفرعي الأول: حماية البيانات حسب تصنيفها وإعادتها بصيغة قابلة للاستخدام عند انتهاء الخدمة).</p><p>المصادر: Essential Cybersecurity Controls (ECC-2:2024)، الهيئة الوطنية للأمن السيبراني.</p></aside>
+</section>
+
+<section class="slide" id="exit-plan" data-lo="LO4">
+  <div class="kicker">خطة الخروج</div>
+  <h2>خطة الخروج التي لم تُختبر افتراض مكتوب</h2>
+  <div class="flow">
+    <div class="step c-coral"><b>المحفزات</b>متى نبدأ الخروج</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>البديل</b>إلى أين</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>الخطوات</b>بالترتيب، لكل خطوة مالك ومدة</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>البيانات</b>ما يُعاد وكيف نتحقق</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>الاختبار</b>تاريخ، ومعيار نجاح</div>
+  </div>
+  <div class="callout tip mt"><b>اختبرها على مرحلتين.</b> تمرين على الورق أولًا، ثم تحويل فعلي لاستخدام واحد منخفض الأثر.</div>
+  <aside class="notes"><p>دليل ناتج التعلم الرابع: البنود، وخطة من صفحة واحدة فيها المحفزات والخطوات والمالكون وتاريخ الاختبار. من يكتب «يُختبر عند الحاجة» لم يكتب تاريخًا.</p></aside>
+</section>
+
+<section class="slide" id="check-alias-clause" data-lo="LO4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي بند كان سيكشف هذا التغيير؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">مساعد خدمة العملاء في شركة طرود يستدعي نموذجًا باسم مستعار. غيّر المزوّد ما يشير إليه الاسم، فصار المساعد يرفض أسئلة كان يجيب عنها، ولم يعلم أحد إلا من الشكاوى. أي بند كان سيمنع هذا؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>إشعار قبل أي تغيير في السلوك، مع حق الاختبار قبل الانتقال</div>
+      <div class="opt" data-why="يعالج إيقاف الإصدار، والتغيير هنا حدث والاسم ما زال يعمل">مهلة لا تقل عن 60 يومًا قبل إيقاف أي إصدار مثبّت</div>
+      <div class="opt" data-why="يعالج ما بعد الضرر، والمطلوب أن يُكتشف التغيير قبل وصوله">خصم في رسوم الشهر الذي تكثر فيه شكاوى العملاء</div>
+      <div class="opt" data-why="يعالج الخروج، والجهة لا تريد الخروج بل معرفة ما تغير">تصدير سجلات المحادثات بصيغة مفتوحة عند الإنهاء</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> التغيير وقع تحت اسم مستعار دون إيقاف. بند الإشعار بالتغيير مع حق التقييم قبل الانتقال هو الذي يجعل التغيير مرئيًا قبل وصوله.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. من اختار «ب» يخلط بين الإيقاف والتغيير؛ أعد شريحة «الاسم المستعار يتغير تحتك».</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-1" data-auto="lab" data-lab="2.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>بعد الخطوة الثانية توقف دقيقة واسأل القاعة: كم يومًا ينقص الصندوق؟ وأي استخدام تغيّر دون أن يعلم أحد؟ ثم أكمل.</p><p>الذكاء الاصطناعي مسموح لصياغة البنود. راقب البنود التي تخرج بأرقام مستديرة بلا سبب، واسأل صاحبها: من أين جاء الرقم؟</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-1" data-label="بعد المختبر 2.1" data-lo="LO4">
+  <div class="kicker">بعد المختبر 2.1</div>
+  <h2>المهلة أقصر من الإجراء بتسعة أيام، والبديل أضعف في اللهجة</h2>
+  <div class="cols cols-3">
+    <div class="stat center"><div class="big">21 / 30</div><div class="lbl">يومًا: مهلة المزوّد، ومدة إجراء التغيير في الصندوق</div></div>
+    <div class="stat center"><div class="big">9 ← 6</div><div class="lbl">حالات اللهجة الخليجية الناجحة من 10، الحالي ثم البديل</div></div>
+    <div class="stat center"><div class="big">W2</div><div class="lbl">تغيّر نموذجه قبل الإشعار عبر الاسم المستعار</div></div>
+  </div>
+  <div class="callout warn mt"><b>ولا يعرف الصندوق ما يستخدمه «مُتابِع».</b> هذا بند في عقد لمح، لا في عقد نقطة السحابية.</div>
+  <aside class="notes"><p>الأرقام من ملفات المختبر: الشروط 7.3 (21 يومًا)، وإجراء الصندوق (30 يومًا)، ونتائج الاختبار (37 ثم 34 من 40 إجمالًا؛ اللهجة 9 ثم 6 من 10؛ الطلبات الحساسة 8 ثم 7 من 8). البنود المرجعية في labs/solutions/D2_1_exit.md.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="retire-triggers" data-lo="LO5">
+  <div class="kicker">محفزات الإيقاف</div>
+  <h2>يُوقف النموذج لسبب مكتوب، لا لأن بديلًا لامعًا ظهر</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>الأداء</h4><p class="small mb0">انحراف لا يعالجه إعادة الضبط، أو حادثة.</p></div>
+    <div class="card c-amber"><h4>الدعم</h4><p class="small mb0">مكتبة أو مورِّد أو مزوّد توقف عن الدعم.</p></div>
+    <div class="card c-purple"><h4>المتطلبات</h4><p class="small mb0">نظام جديد، أو تغير في الغرض، أو ترخيص لم يعد يسمح.</p></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout tip mt"><b>البديل ليس محفزًا وحده.</b> وجود نموذج أفضل سبب للتغيير، والإيقاف قرار له تكلفة ومخاطر تُوزن.</div>
+  <aside class="notes"><p>اطلب من القاعة نموذجًا في جهاتها يجب أن يُوقف ولم يُوقف. السبب الأكثر شيوعًا: لا أحد يملك قرار الإيقاف.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
+<section class="slide" id="governed-change" data-lo="LO5">
+  <div class="kicker">الإيقاف تغيير محكوم</div>
+  <h2>الإيقاف بوابة من بوابات دورة الحياة، لها طلب واعتماد</h2>
   <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+    <div class="step c-teal"><b>1 · القرار</b>المحفز، والمالك، والبديل</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · الخطة</b>المستهلكون، والتراجع، والأرشفة، والتواصل</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · المجلس</b>اعتراض، ثم اعتماد</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>4 · التنفيذ</b>تحويل، ثم مراقبة، ثم إغلاق</div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout note mt"><b>من <span class="en">LDS-AIG-201</span>.</b> بوابة الإيقاف معرّفة هناك بشروط دخولها ومن يعتمدها؛ هنا نكتب الخطة التي تمر بها.</div>
+  <aside class="notes"><p>المبدأ السابع من مبادئ أخلاقيات الذكاء الاصطناعي (المساءلة والمسؤولية) يحمّل المسؤولية للمصممين والمورِّدين والمشترين والمطورين والمالكين، ويطلب أن تظهر الحوكمة والإشراف البشري عبر دورة حياة النظام كلها. الإيقاف جزء من الدورة، والقرارات التي صدرت قبله تبقى مسؤولية الجهة.</p><p>المصادر: مبادئ أخلاقيات الذكاء الاصطناعي (سدايا)، المبدأ السابع.</p></aside>
+</section>
+
+<section class="slide" id="find-consumers" data-lo="LO5">
+  <div class="kicker">المستهلكون</div>
+  <h2>سجل التبعيات يقول من أعلن، وسجل الاستدعاءات يقول من يستدعي</h2>
+  <table class="t">
+    <tr><th>الحالة</th><th>ماذا تعني</th><th>ما تفعله</th></tr>
+    <tr><td>معلن ويستدعي</td><td>مستهلك معروف</td><td>موعد انتقال لكل منهم</td></tr>
+    <tr class="hl"><td>يستدعي ولم يُعلن</td><td>تبعية مخفية</td><td>اعرف مالكه، وانقله، وسجّله</td></tr>
+    <tr><td>معلن ولا يستدعي</td><td>يعتمد على المخرجات المحفوظة، أو لم يعد يعمل</td><td>اسأل كيف يعتمد</td></tr>
+    <tr><td>يستدعي نادرًا</td><td>مهمة شهرية أو فصلية</td><td>اقرأ السجل على دورة كاملة</td></tr>
+  </table>
+  <aside class="notes"><p>اسأل: كم يومًا من السجل تكفي؟ ما يكفي لرؤية أطول دورة: تقرير فصلي لا يظهر في سجل أسبوعين. وبعد الإغلاق راقب الواجهة مدة قبل حذفها.</p></aside>
+</section>
+
+<section class="slide" id="rollback" data-lo="LO5">
+  <div class="kicker">التراجع</div>
+  <h2>التراجع له مدة ومعيار وصاحب قرار</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>المدة</h4><p class="small mb0">إلى متى يبقى النموذج القديم قابلًا للتشغيل بعد التحويل.</p></div>
+    <div class="card c-amber"><h4>المعيار</h4><p class="small mb0">ما الذي، إن حدث، يعيدنا إليه: حد مكتوب قبل التحويل.</p></div>
+    <div class="card c-purple"><h4>صاحب القرار</h4><p class="small mb0">من يقرر العودة، ومن يُبلَّغ.</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> «نعود إن احتجنا» بلا معيار يعني أحد أمرين: لا نعود أبدًا، أو نعود عند أول شكوى.</div>
+  <aside class="notes"><p>التشغيل الموازي قبل التحويل يقلل الحاجة إلى التراجع ولا يلغيها: بيانات الإنتاج بعد التحويل ليست بيانات التشغيل الموازي.</p></aside>
+</section>
+
+<section class="slide" id="archive-retain" data-lo="LO5">
+  <div class="kicker">الأرشفة والاحتفاظ</div>
+  <h2>يُحفظ النموذج ما دام قرار صدر به قابلًا للتظلم</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>النموذج بإصداره ووثائقه ووصف بيانات تدريبه</li>
+      <li>لكل قرار: المدخلات، والمخرجات، والأسباب، ومعرّف الإصدار</li>
+      <li>المدد من جدول الاحتفاظ في الجهة، لا من تاريخ الإيقاف</li>
+      <li>أرشيف للقراءة بصلاحيات محددة، ومحو موثق بعد المدة</li>
+    </ul>
+    <div class="card tint c-navy"><h4>مثال: نموذج أهلية لدعم سكني</h4><p class="small mb0">أُوقف النموذج، ثم تظلم متقدم بعد أشهر. لم يبق إلا القرار «غير مؤهل». لم يستطع أحد أن يشرح لماذا، فأُعيد النظر في الطلب من الصفر.</p></div>
+  </div>
+  <aside class="notes"><p>المثال افتراضي. هذا جوهر المسؤولية في نهاية العمر: من صدر بحقه قرار يستطيع أن يعترض عليه بعد إيقاف النموذج. البيانات الشخصية في الأرشيف تبقى خاضعة لنظام حماية البيانات الشخصية: صلاحيات ومدة ومحو.</p></aside>
+</section>
+
+<section class="slide" id="communicate-remove" data-lo="LO5">
+  <div class="kicker">التواصل وإزالة التبعيات</div>
+  <h2>أبلغ من يتأثر بما يخصه، ثم أزل التبعيات بترتيب يمكن الرجوع عنه</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>التواصل</h4><p class="small mb0">المستخدمون الداخليون: موعد التحويل وما يتغير. أصحاب القرارات المفتوحة: كيف تُراجع قراراتهم. المورِّدون والمستدعون: موعد إغلاق الواجهة.</p></div>
+    <div class="card c-purple"><h4>إزالة التبعيات</h4><p class="small mb0">إلغاء المفاتيح واحدًا واحدًا، ثم مراقبة الواجهة مدة، ثم إغلاقها، ثم المهام المجدولة. الأرشيف يبقى.</p></div>
+  </div>
+  <aside class="notes"><p>لا ترسل رسالة عامة لكل العملاء ما لم يتغير شيء يخصهم: الرسالة غير اللازمة تولّد أسئلة لا جواب لها. الرسالة اللازمة: لمن ينتظر قرارًا أو تظلمًا.</p></aside>
+</section>
+
+<section class="slide" id="residual-risk" data-lo="LO5">
+  <div class="kicker">المخاطر المتبقية</div>
+  <h2>ما لا تزيله الخطة يُسمّى، ويقبله من يملك القرار</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>اسمه:</b> الفرق أو الاحتمال، بالرقم إن وُجد</li>
+      <li><b>من يقبله:</b> صاحب صلاحية، بتوقيع</li>
+      <li><b>كيف يُراقب:</b> مؤشر، وتكرار، وحد للتصعيد</li>
+      <li><b>متى يُراجع:</b> تاريخ لا «عند الحاجة»</li>
+    </ul>
+    <div class="card tint c-amber"><h4>من الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي</h4><p class="small mb0">القبول خيار معالجة حين يكون الخطر المتبقي ضمن حدود التحمل المعتمدة، مع توثيق أسبابه وحدوده وخطة مراجعته.</p></div>
+  </div>
+  <aside class="notes"><p>إعادة صياغة لخيار «القبول» في خيارات معالجة المخاطر في الإطار الوطني. الخطر الذي يُخفى في متوسط عام (أثر على فئة بعينها) هو أكثر ما يرفضه المجلس.</p><p>المصادر: الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (سدايا، 2026)، خيارات معالجة المخاطر.</p></aside>
+</section>
+
+<section class="slide" id="change-board" data-lo="LO5">
+  <div class="kicker">مجلس التغيير</div>
+  <h2>المجلس يعتمد الخطة بعد أن يعترض عليها</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>4 د · العرض</b>الخطة كما هي</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>اعتراض لكل ممثل</b>المخاطر، وحماية البيانات، والعملاء، والتقنية، والرئيس</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>الجواب والقرار</b>مقبول، أو بشرط، أو يُعاد</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>التعديل</b>ثم الاعتماد</div>
+  </div>
+  <div class="callout tip mt"><b>الاعتراض جزء من الاعتماد.</b> الخطة التي لم يعترض عليها أحد لم يقرأها أحد.</div>
+  <aside class="notes"><p>وزّع الأدوار قبل المختبر: كل فريق يجلس مجلسًا لفريق آخر. البطاقات في labs/files/cdm/change_board.md. دليل ناتج التعلم الخامس: خطة يعتمدها المجلس بعد جولة اعتراض واحدة.</p></aside>
+</section>
+
+<section class="slide" id="check-contestable" data-lo="LO5">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الذي يجب أن يبقى؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO5">
+    <p class="lead">جهة دعم سكني توقف نموذج الأهلية بعد تشغيل بديله. متقدم رُفض بالنموذج القديم قبل شهرين، ويحق له التظلم خلال سنة. ماذا يجب أن يبقى محفوظًا ليُراجع قراره؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يحفظ النتيجة دون ما أنتجها، فلا يُشرح القرار ولا يُعاد حسابه">نتيجة القرار في ملف المتقدم وتاريخ صدوره</div>
+      <div class="opt" data-why="يخلط المراجعة بإعادة التقييم: البديل يصدر قرارًا جديدًا، لا يراجع القديم">النموذج البديل، لأنه سيعيد تقييم طلب المتقدم</div>
+      <div class="opt" data-ok>مدخلات القرار وأسبابه، والنموذج بالإصدار الذي أصدره</div>
+      <div class="opt" data-why="يرى السجلات التقنية كافية، وهي تثبت الاستدعاء لا محتوى القرار">سجلات استدعاء الواجهة التقنية خلال السنة الماضية</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> مراجعة قرار تحتاج ما بُني عليه: المدخلات، والأسباب، والنموذج الذي أصدره. بدونها لا يُشرح القرار ولا يُعترض عليه بمعنى.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. هذا ما يطلبه المقرر في المختبر: أن تبقى القرارات السابقة قابلة للتظلم بعد الإيقاف.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-2" data-auto="lab" data-lab="2.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>الفرق من ثلاثة أو أربعة. أعلن الوقت عند نهاية كل خطوة. في الخطوة السادسة، كل فريق يجلس مجلسًا لفريق آخر، وأنت رئيس مجلس واحد على الأقل.</p><p>إن تأخرت الفرق، اختصر المجلس إلى ثلاثة اعتراضات: المخاطر، والعملاء، والتقنية.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-2" data-label="بعد المختبر 2.2" data-lo="LO5">
+  <div class="kicker">بعد المختبر 2.2</div>
+  <h2>مستدعٍ لم يعلنه أحد، ومكتب لا يستدعي ويعتمد على كل شيء</h2>
+  <div class="cols cols-3">
+    <div class="stat center"><div class="big">286</div><div class="lbl">استدعاء في 90 يومًا من جدول بيانات في فرع، لا يعرفه سجل التبعيات</div></div>
+    <div class="stat center"><div class="big">38</div><div class="lbl">تظلمًا مفتوحًا على قرارات النموذج القديم</div></div>
+    <div class="stat center"><div class="big">12</div><div class="lbl">نقطة فرق في القبول في قطاع الزراعة بين القديم والبديل</div></div>
+  </div>
+  <div class="callout tip mt"><b>ما اعتمده المجلس.</b> تراجع بمدة ومعيار وصاحب قرار، وأرشيف ما بقي قرار، وخطر مسمّى موقّع.</div>
+  <aside class="notes"><p>الأرقام من ملفات المختبر: api_access_log.csv (east-branch-sheet، 286 استدعاء في 64 يومًا)، decisions_by_month.csv (65,166 قرارًا و38 تظلمًا مفتوحًا)، parallel_run.csv (الزراعة 61% ثم 49% على 410 طلبات). الخطة المرجعية في labs/solutions/D2_2_retirement.md.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
-  <div class="kicker">خلاصة اليوم 2</div>
-  <h2>ثلاثة أمور تبقى معك</h2>
+  <div class="kicker">الخلاصة</div>
+  <h2>ثلاثة أشياء تأخذها من اليوم الثاني</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>خطط للخروج قبل الدخول</h4><p class="small mb0">مهلة مشتقة من إجراء التغيير، وحق التقييم، وإعادة البيانات بصيغة تقرؤها.</p></div>
+    <div class="card c-cyan"><h4>الإيقاف تغيير محكوم</h4><p class="small mb0">مستهلكون من السجل، وتراجع بمعيار، ومجلس يعترض ثم يعتمد.</p></div>
+    <div class="card c-purple"><h4>المساءلة بعد النهاية</h4><p class="small mb0">القرار السابق يبقى قابلًا للتظلم، فيبقى ما بُني عليه.</p></div>
   </div>
+  <aside class="notes"><p>اربط بالمقرر كله: كل مكوّن خارجي له ترخيص ومنشأ ومالك؛ والدليل على قدر نطاقه؛ وخطة الخروج قبل الدخول؛ والإيقاف تغيير محكوم.</p></aside>
 </section>
 
-<section class="slide dark" id="thanks" data-label="شكرًا">
-  <div class="kicker">أكاديمية سدايا</div>
-  <h1>شكرًا</h1>
-  <p class="lead">الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف</p>
+<section class="slide dark" id="next" data-label="التالي">
+  <div class="kicker">بعد الورشة</div>
+  <h1>ملف المراجعة ومراجعة المتابعة</h1>
+  <p class="lead">مكوّن خارجي تختاره، من وثائقه العامة وحدها: الترخيص، والمنشأ، وفجوات الضمان، وشروط التغيير والخروج، ومحفزات الإيقاف. ثماني دقائق للعرض وخمس للأسئلة.</p>
+  <aside class="notes"><p>ذكّر بقاعدة الأسئلة: يختار المقيّم بندًا من ترخيص المكوّن، ويشرح المشارك أثره دون ملاحظات. من يعرف ترخيصه يجيب في دقيقة.</p><p>لا وثيقة داخلية ولا بيانات شخصية من جهة المشارك في الملف.</p></aside>
 </section>
