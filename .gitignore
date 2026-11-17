@@ -34,3 +34,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 /*.log
+
+# Output of lab 1.2 (each participant writes their own bill of materials)
+labs/files/*.cdx.json

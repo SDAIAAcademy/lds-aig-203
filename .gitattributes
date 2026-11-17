@@ -13,3 +13,10 @@
 *.docx binary
 *.pptx binary
 *.parquet binary
+
+# The signed model package of lab 1.2 and its mirror copy: bytes must never change on checkout,
+# or the signature check fails for the wrong reason
+labs/files/khatt-ocr-small/** -text
+labs/files/mirror/** -text
+labs/files/signatures/** -text
+*.safetensors binary
