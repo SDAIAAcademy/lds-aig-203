@@ -1,0 +1,32 @@
+# الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف
+
+> تقرأ ترخيص كل مكوّن خارجي ومنشأه وأدلة مورِّده، وتكتب شروط التغيير والخروج قبل التوقيع، وتوقف النموذج بخطة يعتمدها مجلس التغيير. مقرر من أكاديمية سدايا، الرمز LDS-AIG-203، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/lds-aig-203/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/lds-aig-203/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/lds-aig-203/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 13,901 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/lds-aig-203/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: ما لا تبنيه جهتك](https://sdaiaacademy.github.io/lds-aig-203/slides/day1.md): تراخيص ستة مكونات خارجية، ومنشأ نموذج مفتوح الأوزان وتوقيعه، وأدلة مورِّد خدمة مستضافة؛ الجلسات: ما نشتريه أو ننزّله، وبأي شروط، المنشأ وقائمة المكونات والتوقيع، ضمان المورِّد: الأدلة ونطاقها؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/slides/day1.html؛ نحو 7,429 من الوحدات النصية
+- [اليوم 2: التغيير والخروج والإيقاف](https://sdaiaacademy.github.io/lds-aig-203/slides/day2.md): نصف يوم: بنود الإشعار والتقييم والخروج لخدمة نماذج مستضافة، ثم خطة إيقاف نموذج قرار ائتماني أمام مجلس تغيير؛ الجلسات: التغيير والخروج، إيقاف نموذج بانضباط؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/slides/day2.html؛ نحو 4,319 من الوحدات النصية
+- [مراجعة المتابعة: ملف مراجعة مكوّن خارجي](https://sdaiaacademy.github.io/lds-aig-203/slides/capstone.md): ملف مراجعة لنموذج أو خدمة خارجية يختارها المشارك من الوثائق العامة، يُناقَش في مراجعة متابعة: ثماني دقائق للعرض وخمس للأسئلة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/slides/capstone.html؛ نحو 1,271 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: جدول التراخيص الستة](https://sdaiaacademy.github.io/lds-aig-203/labs/D1_1_licences.md): اليوم 1، الجلسة 1، 55 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/labs/D1_1_licences.html
+- [المختبر 1.2: سجل منشأ نموذج مفتوح الأوزان](https://sdaiaacademy.github.io/lds-aig-203/labs/D1_2_provenance.md): اليوم 1، الجلسة 2، 55 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/labs/D1_2_provenance.html
+- [المختبر 1.3: مذكرة مراجعة ضمان المورِّد](https://sdaiaacademy.github.io/lds-aig-203/labs/D1_3_assurance.md): اليوم 1، الجلسة 3، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/labs/D1_3_assurance.html
+- [المختبر 2.1: بنود التغيير وخطة الخروج](https://sdaiaacademy.github.io/lds-aig-203/labs/D2_1_exit.md): اليوم 2، الجلسة 1، 55 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/labs/D2_1_exit.html
+- [المختبر 2.2: خطة إيقاف نموذج القرار الائتماني](https://sdaiaacademy.github.io/lds-aig-203/labs/D2_2_retirement.md): اليوم 2، الجلسة 2، 75 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-203/labs/D2_2_retirement.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/lds-aig-203/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 13,901 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/lds-aig-203/context/day1.md): اليوم 1، نحو 7,429 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/lds-aig-203/context/day2.md): اليوم 2، نحو 4,319 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/lds-aig-203/context/capstone.md): مراجعة المتابعة، نحو 1,271 من الوحدات النصية

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.1 · جدول التراخيص الستة · الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_1_licences.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.1</span>
+<h1>جدول التراخيص الستة</h1>
+<p>ستة مكونات يريد صندوق أثل استخدامها، لكل منها ترخيص أو شروط وبطاقة: تملأ لكل منها الاستخدام التجاري وإعادة التوزيع والإسناد والاستخدامات المحظورة مع البند الذي استندت إليه، ثم تكتب قرارًا للصندوق.</p>
+<div class="meta"><span>55 دقيقة</span><span>اليوم 1</span><span>الجلسة 1: ما نشتريه أو ننزّله، وبأي شروط</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>جدول تراخيص لستة مكونات يريد صندوق أثل استخدامها، يذكر لكل منها الاستخدام التجاري وإعادة التوزيع والإسناد والاستخدامات المحظورة، مع البند الذي استندت إليه.</li>
+    <li>قرار لكل مكوّن: يُستخدم، أو يُستخدم بشرط، أو يُعلَّق حتى يُستوضح، مع الشرط أو السؤال.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/case_brief.md" target="_blank"><b>case_brief.md</b><span>الصندوق وأشخاصه وسجل الذكاء الاصطناعي من أطراف خارجية.</span></a>
+  <a href="files/intake_register.csv" download><b>intake_register.csv</b><span>المكونات الستة: النوع والناشر والاستخدام المقصود والترخيص المعلن ورابط نصه وبطاقته.</span></a>
+  <a href="files/licence_table.csv" download><b>licence_table.csv</b><span>الجدول الذي تملؤه، بأعمدته الأحد عشر.</span></a>
+  <a href="files/cards/fawatir-scans.md" target="_blank"><b>cards/</b><span>بطاقات المكونات: sahifa-parse وmustanad-mcp وsarid-70b-instruct وfawatir-scans، وبطاقة Sutur-OCR-small في <span class="ltr">sutur-ocr-small/README.md</span>.</span></a>
+  <a href="files/terms/sudum_cloud_terms.md" target="_blank"><b>terms/sudum_cloud_terms.md</b><span>شروط خدمة النماذج المستضافة لدى سُدُم السحابية (مكتوبة للمقرر).</span></a>
+</div>
+<p class="small">نصوص التراخيص الخمسة الأخرى تُقرأ من صفحاتها الرسمية، والروابط في عمود <span class="ltr">licence text</span>. الذكاء الاصطناعي هنا مرشد: يجوز أن تطلب من مساعد أن يدلك على البند الذي يتناول سؤالًا ما، ثم تقرأ البند بنفسك وتكتب رقمه. لا تكتب في الجدول إجابة لم تجدها في النص. ما تكتبه هنا قراءة تعليمية للنصوص، لا رأي قانوني: القرار في أي ترخيص تعتمد عليه جهة حقيقية للشؤون القانونية فيها.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ سجل الطلبات الستة وافتح نص كل ترخيص من رابطه الرسمي <span class="min">5 د</span></h3>
+  <p>لكل مكوّن: من الناشر، وماذا سيفعل به الصندوق. الاستخدام المقصود يغيّر الإجابة: تعديل خادم أدوات وتشغيله لموظفين يختلف عن استخدامه كما هو.</p>
+</div>
+
+<div class="step">
+  <h3>2 · املأ لكل مكوّن الأعمدة الأربعة <span class="min">20 د</span></h3>
+  <p>أجب عن كل عمود بكلمة أو جملة قصيرة، لا بنعم أو لا وحدها:</p>
+  <table>
+    <tr><th>العمود</th><th>السؤال الذي يجيب عنه</th></tr>
+    <tr><td>commercial use</td><td>هل يجوز للصندوق استخدامه في عمله الذي يدر دخلًا؟ بشرط؟ بحد؟</td></tr>
+    <tr><td>redistribution</td><td>هل يجوز تمريره لغيره، وبأي التزام: نسخة من الترخيص، أو المصدر، أو إشعار؟</td></tr>
+    <tr><td>attribution</td><td>ما الإسناد أو الإشعار المطلوب، وأين يظهر؟</td></tr>
+    <tr><td>prohibited or restricted uses</td><td>ما الممنوع صراحة، أو ما المشروط، في الترخيص أو في سياسة مدمجة فيه بالإحالة؟</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>3 · اكتب لكل خانة البند الذي استندت إليه <span class="min">10 د</span></h3>
+  <p>في عمود <span class="ltr">clauses relied on</span> اكتب رقم القسم أو الفقرة («القسم 4»، «1.b.i»، «5.2»). الخانة التي لا تجد لها بندًا تُكتب «لا يذكرها النص».</p>
+</div>
+
+<div class="step">
+  <h3>4 · قارن بيانات البطاقة بنصها وبنص الترخيص، وسجّل كل تعارض <span class="min">10 د</span></h3>
+  <p>البطاقة ثلاثة مصادر: البيانات الوصفية في رأسها، والنص تحتها، وملف الترخيص المرفق. حين تختلف، سجّل الاختلاف في عمود <span class="ltr">card or text conflict</span> واعمل بالأكثر تقييدًا حتى يُستوضح.</p>
+</div>
+
+<div class="step">
+  <h3>5 · اكتب لكل مكوّن قرارًا للصندوق <span class="min">10 د</span></h3>
+  <p>يُستخدم، أو يُستخدم بشرط، أو يُعلَّق حتى يُستوضح. اكتب الشرط أو السؤال في جملة، ومن يُسأل: الناشر، أو الشؤون القانونية، أو مسؤولة حماية البيانات.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>أعد قراءة الجدول لاستخدام آخر: لو أراد الصندوق أن يتيح نموذجه المضبوط لجهات شريكة، فأي الخانات تتغير، وأي البنود يصبح ملزمًا؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>أي المكونات الستة لا يجوز للصندوق استخدامه في عمله كما هو، ولماذا؟</li>
+  <li>ما الذي يتغير في التزامات الصندوق تجاه خادم الأدوات لو أضاف إليه موصّله الخاص؟</li>
+  <li>في أي بند من شروط الخدمة المستضافة يتقرر هل تُستخدم بيانات الصندوق في التدريب؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الجدول المرجعي في <code>labs/solutions/D1_1_licences.md</code>. يطابق المشارك المرجع إذا أصاب الأعمدة الأربعة في خمسة صفوف من ستة على الأقل.</li>
+    <li>الفخ الأول: بيانات رأس بطاقة fawatir-scans تقول <span class="ltr">cc-by-4.0</span> ونصها يقول CC BY-NC 4.0. من يكتب «تجاري: نعم» قرأ الرأس وحده.</li>
+    <li>الفخ الثاني: بطاقة Sarid تقول «مجاني للاستخدام التجاري» ولا تذكر شروط إعادة التوزيع ولا اسم «Llama» في أول اسم النموذج المضبوط.</li>
+    <li>الفخ الثالث: من يكتب أن AGPL «لا يمس الاستخدام الداخلي» ينسى أن الصندوق سيعدّل الخادم ويتيحه لموظفين عبر الشبكة، فيصبح القسم 13 سؤالًا تحسمه الشؤون القانونية لا افتراضًا.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><span></span><a href="D1_2_provenance.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 50b1f67</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:54Z","version":"2027.1.0","commit":"50b1f67"},"course":{"id":"lds-aig-203","code":"LDS-AIG-203","title":"الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-aig-203/","repo":"SDAIAAcademy/lds-aig-203","home":"../index.html"},"lab":{"id":"1.1","title":"جدول التراخيص الستة","summary":"ستة مكونات يريد صندوق أثل استخدامها، لكل منها ترخيص أو شروط وبطاقة: تملأ لكل منها الاستخدام التجاري وإعادة التوزيع والإسناد والاستخدامات المحظورة مع البند الذي استندت إليه، ثم تكتب قرارًا للصندوق.","minutes":55,"day":1,"unit":"اليوم 1","session":1,"deck":"../slides/day1.html#lab-1-1","prev":null,"next":"D1_2_provenance.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · سجل منشأ نموذج مفتوح الأوزان · الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_provenance.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>سجل منشأ نموذج مفتوح الأوزان</h1>
+<p>حزمة نموذج مفتوح الأوزان لقراءة الفواتير مع بطاقتها وسجل إصداراتها: تولّد قائمة مكوناتها بنص برمجي مقدَّم، وتتحقق من توقيعها، ثم تكتب سجل منشأ بمصادره وفجواته.</p>
+<div class="meta"><span>55 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: المنشأ وقائمة المكونات والتوقيع</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>قائمة مكونات لحزمة نموذج Sutur-OCR-small بصيغة CycloneDX، ولّدتها بنفسك.</li>
+    <li>نتيجتي تحقق من التوقيع: على الحزمة كما نشرها ناشرها، وعلى نسخة ثانية من منصة أخرى.</li>
+    <li>سجل منشأ يذكر المصادر وتاريخ الإصدارات والبيانات المعلنة والتوقيعات التي تحققت منها والأسئلة المفتوحة.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/sutur-ocr-small/README.md" target="_blank"><b>sutur-ocr-small/</b><span>الحزمة كما نشرها الناشر: البطاقة وسجل الإصدارات والترخيص والإعدادات وملف أوزان صغير جدًا (اصطناعي).</span></a>
+  <a href="files/mirror/sutur-ocr-small/README.md" target="_blank"><b>mirror/sutur-ocr-small/</b><span>نسخة ثانية رفعها مستخدم آخر على منصة عامة وتقول إنها النموذج نفسه.</span></a>
+  <a href="files/signatures/sutur-lab.pub" target="_blank"><b>signatures/</b><span>توقيع الناشر على الحزمة ومفتاحه العام، كما ينشرهما في صفحته.</span></a>
+  <a href="files/provenance_record_template.md" target="_blank"><b>provenance_record_template.md</b><span>قالب سجل المنشأ.</span></a>
+  <a href="tools/provenance.py" target="_blank"><b>tools/provenance.py</b><span>نص برمجي مقدَّم بثلاثة أوامر: check وbom وverify.</span></a>
+</div>
+<p class="small">تحتاج <span class="en">uv</span> مثبتًا (<span class="ltr">uv --version</span>) وملفات المقرر على جهازك. ينزّل الأمر الأول مكتبتين من بايثون، ولا يُنزَّل أي نموذج ولا يُشغَّل. شغّل الأوامر من مجلد <span class="ltr">labs</span>.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · شغّل أمر الفحص وتأكد أن الأداة تعمل على جهازك <span class="min">5 د</span></h3>
+  <pre class="code"><code>uv run tools/provenance.py check</code></pre>
+  <p>إن طبع إصدار <span class="ltr">model-signing</span> فأنت جاهز. إن تعذّر التثبيت، اعمل مع زميل على جهازه.</p>
+</div>
+
+<div class="step">
+  <h3>2 · اقرأ بطاقة النموذج وسجل إصداراته، وسجّل المصادر المعلنة <span class="min">10 د</span></h3>
+  <p>من البطاقة: الناشر والإصدار والنموذج الأساسي ومجموعات البيانات والترخيص. من سجل الإصدارات: ماذا تغيّر في كل إصدار، وما البصمة التي نشرها الناشر. اكتب كل حقل في القالب مع مصدره.</p>
+</div>
+
+<div class="step">
+  <h3>3 · ولّد قائمة المكونات واقرأ ما فيها وما ليس فيها <span class="min">10 د</span></h3>
+  <pre class="code"><code>uv run tools/provenance.py bom files/sutur-ocr-small</code></pre>
+  <p>يكتب الأمر <span class="ltr">files/sutur-ocr-small.cdx.json</span> ويطبع ما تعلنه البطاقة وبصمة كل ملف. افتح الملف وابحث عن <span class="ltr">machine-learning-model</span> و<span class="ltr">pedigree</span> و<span class="ltr">datasets</span>. قارن بصمة ملف الأوزان بالبصمة في سجل الإصدارات. تكتب الأداة القائمة بالإصدار 1.6 من مواصفة <span class="en">CycloneDX</span> (حقل <span class="ltr">specVersion</span>)، لا بالإصدار الحالي 1.7؛ الحقول التي تبحث عنها هنا موجودة في الإصدارين بالأسماء نفسها.</p>
+</div>
+
+<div class="step">
+  <h3>4 · تحقق من التوقيع على الحزمة وعلى النسخة الثانية، وفسّر النتيجة <span class="min">10 د</span></h3>
+  <pre class="code"><code>uv run tools/provenance.py verify files/sutur-ocr-small
+uv run tools/provenance.py verify files/mirror/sutur-ocr-small</code></pre>
+  <p>اكتب لكل نتيجة ما تثبته وما لا تثبته. التوقيع يربط الملفات بحامل المفتاح؛ فمن يحمل المفتاح، وكيف عرفت أن هذا مفتاحه؟</p>
+</div>
+
+<div class="step">
+  <h3>5 · اكتب سجل المنشأ <span class="min">20 د</span></h3>
+  <p>املأ القالب: المصادر، وتاريخ الإصدارات، والبيانات المعلنة، والتوقيعات التي تحققت منها، والأسئلة المفتوحة. افصل في كل حقل بين «تحققت منه» و«معلن فقط». اكتب ثلاثة أسئلة مفتوحة على الأقل، لكل منها من يجيب عنه، ثم توصية للصندوق.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ إضافي</h3>
+  <p>حوّل أسئلتك المفتوحة إلى طلب رسمي من ثلاثة بنود إلى ناشر النموذج، لكل بند الدليل الذي يغلقه.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>هل ملف الأوزان الذي معك هو الذي نُشر في الإصدار 1.0؟ كيف عرفت؟</li>
+  <li>ما الذي تغيّر في النسخة الثانية، وما الذي ستفعله بها؟</li>
+  <li>أي سؤال مفتوح يربط هذا النموذج بقرار اتخذته في المختبر 1.1؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>السجل المرجعي في <code>labs/solutions/D1_2_provenance.md</code>، والتشغيل الكامل في <code>uv run solutions/check.py</code>.</li>
+    <li>إذا تعذر <span class="en">uv</span> على أجهزة كثيرة، شغّل الأوامر على شاشتك واطلب من القاعة قراءة المخرجات وكتابة السجل.</li>
+    <li>الفخ: من يكتب «التوقيع صحيح إذن النموذج آمن ومرخص». التوقيع يثبت أن الملفات لم تتغير بعد أن وقّعها حامل المفتاح، لا أكثر.</li>
+    <li>احذف ملفات <span class="ltr">*.cdx.json</span> التي ولّدها المشاركون قبل إعادة استخدام المجلد.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_1_licences.html" rel="prev">→ المختبر السابق</a><a href="D1_3_assurance.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 50b1f67</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T23:09:54Z","version":"2027.1.0","commit":"50b1f67"},"course":{"id":"lds-aig-203","code":"LDS-AIG-203","title":"الذكاء الاصطناعي من أطراف خارجية: التراخيص وسلسلة الإمداد والإيقاف","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-aig-203/","repo":"SDAIAAcademy/lds-aig-203","home":"../index.html"},"lab":{"id":"1.2","title":"سجل منشأ نموذج مفتوح الأوزان","summary":"حزمة نموذج مفتوح الأوزان لقراءة الفواتير مع بطاقتها وسجل إصداراتها: تولّد قائمة مكوناتها بنص برمجي مقدَّم، وتتحقق من توقيعها، ثم تكتب سجل منشأ بمصادره وفجواته.","minutes":55,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_licences.html","next":"D1_3_assurance.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
