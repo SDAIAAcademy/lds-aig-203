@@ -1,158 +1,491 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>رحّب بالمشاركين واسأل: كم مكوّنًا للذكاء الاصطناعي في جهاتكم لم تبنه الجهة نفسها؟ نموذج عبر واجهة برمجية، مكتبة، مجموعة بيانات، ميزة داخل برنامج مشترى. الأرقام تكون عادة أكبر مما يتوقعه أصحابها، وهذا موضوع اليوم.</p><p>الإيقاع: اليوم ثلاث جلسات، في كل منها نحو 36 دقيقة من المفاهيم ثم مختبر من 55 إلى 60 دقيقة. غدًا نصف يوم بجلستين. الاستراحات بزر B.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>الخيط الواحد: كل مكوّن خارجي له ترخيص، ومنشأ، ومالك عند المورِّد. نقرأ الترخيص في الجلسة الأولى، والمنشأ في الثانية، وأدلة المورِّد في الثالثة.</p></aside>
+</section>
+
+<section class="slide" id="setup-check" data-label="قبل أن نبدأ">
+  <div class="kicker">قبل أن نبدأ</div>
+  <h2>متصفح، ومحرر نصوص، وأداة <span class="en">uv</span> للمختبر الثاني</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>ملفات المقرر على جهازك، مجلد <span class="ltr">labs</span></li>
+      <li>متصفح تقرأ فيه نصوص التراخيص من صفحاتها الرسمية</li>
+      <li>جدول بيانات أو محرر نصوص للجداول والمذكرات</li>
+      <li><span class="en">uv</span> لتشغيل نص برمجي واحد في المختبر 1.2؛ لا يُنزَّل أي نموذج</li>
+    </ul>
+    <div class="card c-teal"><h4>اختبار دقيقة واحدة</h4><p class="small mb0">من مجلد <span class="ltr">labs</span> شغّل:</p><pre class="code"><code>uv run tools/provenance.py check</code></pre><p class="small mb0">إن طبع إصدار <span class="ltr">model-signing</span> فأنت جاهز.</p></div>
+  </div>
+  <aside class="notes"><p>شغّل أمر الفحص في الاستراحة الأولى عند من لم ينجح عنده. الأمر الأول ينزّل مكتبتين من بايثون فقط. إن منع جدار الحماية التنزيل، يعمل المشارك مع زميل في المختبر 1.2، أو تشغّل أنت الأوامر على الشاشة.</p><p>كل الملفات اصطناعية. لا يُرفع شيء من جهة المشارك إلى أي أداة.</p></aside>
+</section>
+
+<section class="slide" id="meet-athl" data-label="صندوق أثل" data-lo="LO1">
+  <div class="kicker">دراسة الحالة</div>
+  <h2>صندوق أثل يشتري وينزّل أكثر مما يبني</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>ثلاثة نماذج خارجية</h4><p class="small mb0">نموذج مفتوح الأوزان يقرأ الفواتير، ونموذج لغوي مفتوح الأوزان يلخص الطلبات، ونموذج مملوك مستضاف يصوغ الرسائل.</p></div>
+    <div class="card c-cyan"><h4>خدمة وكلاء مستضافة</h4><p class="small mb0">«مُتابِع» من «لَمْح للخدمات الذكية» يذكّر المقترضين بالأقساط ويجيب عن أسئلتهم.</p></div>
+    <div class="card c-purple"><h4>نموذج قرار يُوقف</h4><p class="small mb0">نموذج قرار ائتماني بناه مورِّد قبل ثلاث سنوات، وله بديل جاهز.</p></div>
+  </div>
+  <div class="callout warn mt"><b>لماذا الآن.</b> طلبت ريم العكّاس، مديرة حوكمة الذكاء الاصطناعي، مراجعة كل مكوّن خارجي قبل التوسع: لم يقرأ أحد ترخيصًا، ولم يتحقق أحد من منشأ.</div>
+  <aside class="notes"><p>عرّف الأشخاص: ريم العكّاس مديرة الحوكمة، ومهند السياري مدير المشتريات والموردين، ونوف الرويلي مسؤولة حماية البيانات الشخصية، وثامر الكناني رئيس نماذج مخاطر الائتمان، ولولوة الحطّاب قائدة تجربة العملاء.</p><p>الشرائح تأخذ أمثلتها من جهات وتراخيص أخرى، والمختبرات تعمل على ملفات الصندوق، حتى لا تكشف الشريحة إجابة المختبر.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide" id="six-kinds" data-lo="LO1">
+  <div class="kicker">ما الذي يشمله</div>
+  <h2>الذكاء الاصطناعي من أطراف خارجية أوسع من «النموذج الذي اشتريناه»</h2>
+  <table class="t">
+    <tr><th>النوع</th><th>مثال من جهة توصيل طرود</th><th>ما يحكمه</th></tr>
+    <tr><td>نموذج عبر واجهة برمجية</td><td>نموذج لغوي مستضاف يكتب ردود الشكاوى</td><td>شروط الخدمة</td></tr>
+    <tr><td>نموذج مفتوح الأوزان</td><td>نموذج تحسين المسارات منزَّل من منصة عامة</td><td>ترخيص الأوزان</td></tr>
+    <tr><td>مجموعات بيانات ومعايير قياس</td><td>عناوين مشروحة لتدريب نموذج الفرز</td><td>ترخيص البيانات وشروط جمعها</td></tr>
+    <tr><td>مكتبات وإضافات وخوادم أدوات وأوامر جاهزة</td><td>خادم أدوات يربط المساعد بنظام الشحن</td><td>ترخيص الرمز البرمجي</td></tr>
+    <tr><td>ميزة ذكاء اصطناعي داخل برنامج مشترى</td><td>تلخيص تلقائي في نظام خدمة العملاء</td><td>عقد البرنامج وملاحقه</td></tr>
+  </table>
+  <div class="callout tip mt small"><b>السادس: خدمات الوكلاء المستضافة.</b> تجمع نموذجًا وأدوات وبيانات عند مورِّد واحد، وغالبًا عند مورِّده هو أيضًا.</div>
+  <aside class="notes"><p>اسأل القاعة: أي صف ينساه السجل في جهاتكم؟ الإجابة الأكثر تكرارًا: الميزة داخل البرنامج المشترى، والأوامر الجاهزة التي ينسخها الموظفون من الإنترنت. كلها مكونات خارجية لها شروط.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="recap-inventory" data-lo="LO1">
+  <div class="kicker">من المقرر السابق</div>
+  <h2>السجل وبوابات دورة الحياة موجودة؛ هنا نقرأ ما وراء كل سطر خارجي</h2>
+  <div class="cols cols-2">
+    <div class="card flat c-navy"><h4>في <span class="en">LDS-AIG-201</span></h4><p class="small mb0">سجل أنظمة الذكاء الاصطناعي بمالكها وغرضها ومصدر نموذجها ومستوى مخاطرها، وبوابات من القبول إلى الإيقاف.</p></div>
+    <div class="card flat c-teal"><h4>في هذا المقرر</h4><p class="small mb0">لكل سطر مصدره خارجي: ترخيصه، ومنشؤه، وأدلة مورِّده، وشروط تغييره والخروج منه، ثم إيقافه.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout note mt"><b>حدود المقرر.</b> التفاوض على العقود في <span class="en">LDS-EXE-205</span>، وتوقيع مسارات المعالجة في <span class="en">DEV-SEC-304</span>. هنا نقرأ ونحلل ونصوغ البنود.</div>
+  <aside class="notes"><p>شريحة تذكير واحدة. من لم يحضر المقرر السابق يكفيه أن يعرف أن السجل يحمل حقل «مصدر النموذج»، وأن الإيقاف بوابة من بوابات دورة الحياة. ندرس الإيقاف بالتفصيل غدًا.</p></aside>
+</section>
+
+<section class="slide" id="four-families" data-lo="LO1">
+  <div class="kicker">عائلات التراخيص</div>
+  <h2>أربع عائلات، يختلف فيها من يُلزَم وبماذا</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>متساهلة</h4><p class="small mb0">تسمح بكل شيء تقريبًا مع إبقاء الإشعار. مثال: <span class="en">BSD-3-Clause</span>.</p></div>
+    <div class="card c-cyan"><h4>الحقوق المتماثلة</h4><p class="small mb0">ما تمرره لغيرك يمر بالترخيص نفسه ومع مصدره. مثال: <span class="en">GPL-3.0</span>.</p></div>
+    <div class="card c-amber"><h4>أوزان مفتوحة بقيود</h4><p class="small mb0">تنزّل الأوزان، لكن الاستخدام مقيد بسياسة أو حد. مثال: شروط <span class="en">Gemma</span>.</p></div>
+    <div class="card c-coral"><h4>مملوكة</h4><p class="small mb0">حق استخدام خدمة بعقد، بلا أوزان ولا رمز.</p></div>
+  </div>
+  <div class="callout warn mt"><b>«مفتوح» صفة للأوزان لا للترخيص.</b> أن تستطيع تنزيل الأوزان لا يعني أن كل استخدام مسموح.</div>
+  <aside class="notes"><p>الأمثلة هنا ليست تراخيص المختبر. في المختبر ستقرأ ستة تراخيص أخرى من العائلات نفسها.</p><p>المصادر: صفحة ترخيص BSD-3-Clause لدى Open Source Initiative؛ نص GPL-3.0 لدى مؤسسة البرمجيات الحرة؛ شروط استخدام Gemma (آخر تعديل في 1 أبريل 2026).</p></aside>
+</section>
+
+<section class="slide" id="four-questions" data-lo="LO1">
+  <div class="kicker">أربعة أسئلة لكل ترخيص</div>
+  <h2>اقرأ الترخيص بأسئلة الاستخدام، لا بعنوانه</h2>
+  <table class="t">
+    <tr><th>السؤال</th><th><span class="en">BSD-3-Clause</span></th><th><span class="en">GPL-3.0</span></th></tr>
+    <tr><td>الاستخدام التجاري</td><td>مسموح</td><td>مسموح</td></tr>
+    <tr><td>إعادة التوزيع</td><td>مسموحة مع الإشعار والشروط وإخلاء المسؤولية</td><td>بالترخيص نفسه، ومع المصدر الكامل</td></tr>
+    <tr><td>الإسناد</td><td>الإشعار في المصدر وفي وثائق النسخة الثنائية</td><td>الإبقاء على الإشعارات</td></tr>
+    <tr><td>المحظورات</td><td>لا تروّج باسم أصحاب الحقوق دون إذن</td><td>لا تضف قيودًا على من يتلقى منك</td></tr>
+  </table>
+  <div class="callout tip mt small"><b>اكتب رقم البند مع كل إجابة.</b> الإجابة بلا بند رأي، والإجابة مع البند دليل يراجعه غيرك.</div>
+  <aside class="notes"><p>اعرض نص BSD-3-Clause على الشاشة: ثلاثة شروط فقط، كلها تخص إعادة التوزيع والترويج بالاسم. ثم اسأل: متى يصبح شرط GPL ملزمًا للجهة؟ حين تمرر البرنامج لغيرها. الاستخدام الداخلي وحده لا يطلق الشرط في GPL-3.0. بعض تراخيص الحقوق المتماثلة تطلقه أيضًا حين يتفاعل المستخدمون مع البرنامج عبر الشبكة: اقرأ النص.</p><p>الذكاء الاصطناعي مرشد هنا: اطلب منه أن يدلك على البند، ثم اقرأ البند بنفسك.</p></aside>
+</section>
+
+<section class="slide" id="restricted-open-weight" data-lo="LO1">
+  <div class="kicker">أوزان مفتوحة بقيود</div>
+  <h2>شروط النموذج مفتوح الأوزان تلاحقه إلى كل من يستخدمه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>الخدمة المستضافة توزيع:</b> إتاحة النموذج عبر واجهة برمجية لغيرك تُعد توزيعًا</li>
+      <li><b>القيود تنتقل:</b> قيود الاستخدام تُكتب في اتفاقك مع من تمرر إليهم</li>
+      <li><b>المشتقات أوسع مما تظن:</b> نموذج دُرّب على مخرجات النموذج لتقليده مشتق</li>
+      <li><b>الشروط تتغير:</b> للمانح أن يحدّث، وعند الإنهاء تُحذف النسخ</li>
+    </ul>
+    <div class="card tint c-amber"><h4>مثال: شروط استخدام <span class="en">Gemma</span></h4><p class="small mb0">الأقسام 1.1(b) و1.1(e) و3.1 و3.2 و4.5. اقرأها قبل أن تعدّ النموذج «مفتوحًا».</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> بطاقة تقول «مجاني للاستخدام التجاري» ليست هي الترخيص. الترخيص هو النص المرفق أو المحال إليه.</div>
+  <aside class="notes"><p>هذه أحكام من شروط Gemma بإعادة صياغة: تعريف التوزيع يشمل الخدمة المستضافة (1.1(b))؛ المشتقات تشمل التقطير بالمخرجات (1.1(e))؛ عند إعادة التوزيع تُدرج قيود الاستخدام في الاتفاق مع المتلقي (3.1)؛ عند الإنهاء تُحذف النسخ (4.5). تراخيص أخرى من العائلة نفسها تضيف حدًا لعدد المستخدمين، أو شرطًا على اسم النموذج المشتق: ستقرأ واحدًا منها في المختبر.</p><p>المصادر: Gemma Terms of Use، آخر تعديل 1 أبريل 2026.</p></aside>
+</section>
+
+<section class="slide" id="dataset-terms" data-lo="LO1">
+  <div class="kicker">البيانات</div>
+  <h2>لمجموعة البيانات سؤالان: ترخيصها، وكيف جُمعت</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>الترخيص</h4><p class="small mb0">مثال <span class="en">CC BY 4.0</span>: الاستخدام التجاري مسموح، مع الإسناد وبيان التعديلات. تراخيص أخرى من العائلة تمنع الاستخدام التجاري أو تفرض الترخيص نفسه على ما تبنيه.</p></div>
+    <div class="card c-coral"><h4>شروط الجمع</h4><p class="small mb0">هل جُمعت بموافقة؟ هل كُشطت من مواقع تمنع ذلك؟ هل فيها بيانات شخصية؟ ترخيص متساهل لا يصلح جمعًا مخالفًا.</p></div>
+  </div>
+  <div class="callout note mt"><b>في جهة سعودية.</b> البيانات الشخصية في مجموعة بيانات خارجية تبقى بيانات شخصية: يسأل عنها مسؤول حماية البيانات قبل الاستخدام، لا بعده.</div>
+  <aside class="notes"><p>اطلب من القاعة مثالًا لمجموعة بيانات عامة استخدموها. ثم اسأل: من أين جاءت؟ قليلون يعرفون. بطاقة البيانات الجيدة تذكر طريقة الجمع والترخيص معًا.</p><p>المصادر: نص CC BY 4.0 لدى Creative Commons؛ وثائق بطاقات البيانات في Hugging Face.</p></aside>
+</section>
+
+<section class="slide" id="hosted-terms" data-lo="LO1">
+  <div class="kicker">الخدمات المستضافة</div>
+  <h2>في شروط الخدمة المستضافة ثلاثة بنود تقرر أين تذهب بياناتك</h2>
+  <table class="t">
+    <tr><th>البند</th><th>السؤال</th><th>الإجابة التي تحتاجها</th></tr>
+    <tr><td>استخدام البيانات</td><td>هل تُستخدم مدخلاتنا في تدريب الخدمة أو تحسينها؟</td><td>لا، بنص لا بخيار يُفعَّل لاحقًا</td></tr>
+    <tr><td>الاحتفاظ</td><td>كم تُحفظ المدخلات والمخرجات وسجلاتها، ولماذا؟</td><td>مدة محددة وغرض محدد</td></tr>
+    <tr><td>الموقع</td><td>أين تُخزَّن، وأين تُعالَج عند الضغط؟</td><td>منطقة محددة للتخزين وللمعالجة</td></tr>
+  </table>
+  <div class="callout warn mt"><b>نقل البيانات الشخصية خارج المملكة.</b> لائحة نقل البيانات الشخصية تطلب من جهة التحكم تقييمًا للمخاطر قبل النقل في حالات تحددها، يشمل الغرض والضمانات والحد الأدنى من البيانات.</div>
+  <aside class="notes"><p>لائحة نقل البيانات الشخصية إلى خارج المملكة، المادة 7: تقييم المخاطر قبل النقل أو الإفصاح في الحالات المحددة، وعناصره: الغرض والأساس النظامي، ووصف النقل ونطاقه الجغرافي، والضمانات وكفايتها، والاقتصار على الحد الأدنى، والآثار المحتملة واحتمالها، والتدابير. لا تحفظ رقم المادة للقاعة؛ المهم أن السؤال يُطرح قبل التوقيع.</p><p>المصادر: لائحة نقل البيانات الشخصية إلى خارج المملكة (سدايا)؛ سياسة تصنيف البيانات لمكتب إدارة البيانات الوطنية لتحديد ما يجوز إرساله.</p></aside>
+</section>
+
+<section class="slide" id="three-places" data-lo="LO1">
+  <div class="kicker">أين يُكتب الترخيص</div>
+  <h2>للترخيص ثلاثة مواضع في البطاقة، وقد لا تتفق</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · رأس البطاقة</b>حقل <code>license</code> الذي تقرؤه المنصة وتعرضه</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · نص البطاقة</b>ما كتبه الناشر بيده تحت عنوان الترخيص</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · ملف الترخيص</b>النص المرفق أو المحال إليه، وهو الملزم</div>
+  </div>
+  <div class="callout tip mt"><b>القاعدة.</b> حين تختلف المواضع، اعمل بالأكثر تقييدًا، وسجّل الاختلاف سؤالًا للناشر.</div>
+  <aside class="notes"><p>المنصات العامة تعرض الترخيص من حقل الرأس، فيراه الجميع ويكتفون به. الحقل يملؤه الناشر بيده، والخطأ فيه شائع. في المختبر، الخطوة الرابعة كلها لهذا الفحص.</p><p>المصادر: وثائق تراخيص المستودعات وبطاقات النماذج في Hugging Face.</p></aside>
+</section>
+
+<section class="slide" id="check-hosted-restricted" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي التزام يبدأ حين تتحول إلى مزوّد؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">شركة ناشئة تبيع للمدارس مساعدًا للواجبات. شغّلت نموذجًا مفتوح الأوزان بشروط مثل شروط <span class="en">Gemma</span> على خوادمها، وتتيحه للمدارس عبر واجهة برمجية. أي التزام صار عليها؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يظن أن التوزيع نسخ ملفات فقط: الشروط تعدّ الإتاحة عبر الواجهة توزيعًا">لا شيء، فهي لا تسلّم الأوزان لأي مدرسة</div>
+      <div class="opt" data-why="يخلط بين شرطين: هذا شرط عائلة الحقوق المتماثلة على الرمز، لا شرط هذه الشروط">نشر الرمز المصدري لتطبيقها للمدارس كاملًا</div>
+      <div class="opt" data-ok>إدراج قيود الاستخدام في اتفاقها مع المدارس</div>
+      <div class="opt" data-why="يقيس الإلزام بعدد المستخدمين، وهو حد في تراخيص أخرى لا في هذه">طلب ترخيص خاص لأن عملاءها جهات تعليمية</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الإتاحة عبر خدمة مستضافة توزيع في هذه الشروط، والموزِّع يمرر قيود الاستخدام إلى من يتلقى منه.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. من يختار «أ» يعدّ التوزيع نسخًا للملفات. ارجع إلى تعريف «التوزيع» في 1.1(b).</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>ابدأ المؤقت. مرّ على المجموعات في الدقيقة العاشرة: من لم يفتح النصوص الرسمية ويعتمد على البطاقات وحدها يحتاج دفعة.</p><p>المشكلات المعتادة: صفحة ترخيص لا تفتح من الشبكة (الروابط الخمسة كلها لمواقع أصحابها)؛ الخلط بين «إعادة التوزيع» و«الاستخدام». البديل: من لم يكمل يأخذ الجدول المرجعي في المراجعة.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-1" data-label="بعد المختبر 1.1" data-lo="LO1">
+  <div class="kicker">بعد المختبر 1.1</div>
+  <h2>ثلاثة صفوف يخطئ فيها أكثر الجداول</h2>
+  <div class="cols cols-3">
+    <div class="card flat c-coral"><h4>fawatir-scans</h4><p class="small mb0">الرأس يقول <span class="ltr">cc-by-4.0</span> والنص يقول <span class="en">CC BY-NC 4.0</span>. استخدام الصندوق تجاري: يُعلَّق.</p></div>
+    <div class="card flat c-amber"><h4>Sarid-70B-Instruct</h4><p class="small mb0">مضبوط من <span class="en">Llama 3.3</span>، واسمه لا يبدأ بـ «Llama»، ولا «Built with Llama». البند 1.b.i.</p></div>
+    <div class="card flat c-purple"><h4>mustanad-mcp</h4><p class="small mb0"><span class="en">AGPL-3.0</span> والصندوق سيضيف موصّله ويتيحه للموظفين عبر الشبكة: القسم 13.</p></div>
+  </div>
+  <div class="callout tip mt"><b>المعيار.</b> يطابق جدولك المرجع إذا أصبت الأعمدة الأربعة في خمسة صفوف من ستة.</div>
+  <aside class="notes"><p>اعرض هذه الشريحة بعد المختبر فقط. اطلب من ثلاثة مشاركين قراءة إجابتهم لصف واحد مع البند. الجدول المرجعي في labs/solutions/D1_1_licences.md.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide" id="provenance-questions" data-lo="LO2">
+  <div class="kicker">المنشأ</div>
+  <h2>المنشأ خمسة أسئلة، وبعضها لا يجيب عنه إلا الناشر</h2>
+  <ol class="bullets">
+    <li><b>من صنعه؟</b> ومن رفعه إلى المنصة، وهل هما الجهة نفسها؟</li>
+    <li><b>من أي شيء؟</b> النموذج الأساسي، وبيانات التدريب والضبط</li>
+    <li><b>أي إصدار؟</b> وماذا تغيّر بين الإصدارات</li>
+    <li><b>هل تغيّر بعد نشره؟</b> البصمات والتوقيع</li>
+    <li><b>ما الذي لا نعرفه؟</b> الأسئلة المفتوحة ومن يجيب عنها</li>
+  </ol>
+  <div class="callout note mt"><b>الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي</b> يعدّ الاعتماد على بيانات أو نماذج أو مكونات من أطراف ثالثة، ومحدودية الشفافية بين المطورين والمشغلين، من تحديات تقدير الخطر.</div>
+  <aside class="notes"><p>السؤال الخامس هو الذي يميز سجل المنشأ الجيد: سجل بلا أسئلة مفتوحة إما لنموذج موثق توثيقًا نادرًا، أو لمراجع لم يبحث.</p><p>المصادر: الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (سدايا، 2026)، قسم تحديات إدارة المخاطر: المخاطر المرتبطة بالأطراف الثالثة.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="cards-declare" data-lo="LO2">
+  <div class="kicker">البطاقات</div>
+  <h2>البطاقة إعلان من الناشر: اقرأ ما تقوله، وما تسكت عنه</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>بطاقة النموذج</h4><p class="small mb0">في الرأس: <code>license</code> و<code>base_model</code> و<code>datasets</code>. في النص: الاستخدام المقصود، والتقييم، والقيود.</p></div>
+    <div class="card c-cyan"><h4>بطاقة مجموعة البيانات</h4><p class="small mb0">المصدر، وطريقة الجمع، والترخيص، والمعالجة، والبيانات الشخصية، والقيود.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> «دُرّب على بيانات داخلية» و«قُيّم على بياناتنا» جملتان تبدوان معلومة، وهما في الحقيقة سؤالان مفتوحان.</div>
+  <aside class="notes"><p>في منصة Hugging Face، حقل base_model في رأس البطاقة يربط النموذج المضبوط بأصله، وحقل datasets بمجموعات البيانات. الحقلان اختياريان، والناشر يملؤهما بيده.</p><p>المصادر: وثائق Model Cards وDataset Cards في Hugging Face.</p></aside>
+</section>
+
+<section class="slide" id="release-history" data-lo="LO2">
+  <div class="kicker">تاريخ الإصدارات</div>
+  <h2>الإصدار الذي راجعته ليس بالضرورة الذي تشغّله اليوم</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الناشر يرفع أوزانًا جديدة بالاسم نفسه</li>
+      <li>«إصلاحات طفيفة» قد تعني إعادة تدريب</li>
+      <li>رقم الإصدار يكتبه الناشر؛ البصمة يحسبها الملف</li>
+      <li>ثبّت في سجلك بصمة الملف الذي راجعته</li>
+    </ul>
+    <div class="card tint c-navy"><h4>جهة توصيل طرود</h4><p class="small mb0">راجعت نموذج تحسين المسارات في إصداره الأول. بعد ستة أشهر صار يقترح مسارات أطول في حي واحد. السبب: الناشر رفع أوزانًا جديدة، وسحبتها مهمة التحديث الليلية.</p></div>
+  </div>
+  <aside class="notes"><p>المثال افتراضي. اسأل: من في جهتكم يسحب «أحدث إصدار» تلقائيًا؟ الجواب الصحيح في الإنتاج: لا أحد، والتحديث تغيير يمر بإجراء التغيير.</p></aside>
+</section>
+
+<section class="slide" id="ai-bom" data-lo="LO2">
+  <div class="kicker">قائمة المكونات</div>
+  <h2>قائمة مكونات الذكاء الاصطناعي تكتب المنشأ بصيغة تقرؤها الآلة</h2>
+  <table class="t">
+    <tr><th>المعيار</th><th>ما يضيفه للذكاء الاصطناعي</th></tr>
+    <tr><td><span class="en">CycloneDX</span> (الإصدار الحالي 1.7، ومعيار <span class="en">ECMA-424</span>)</td><td>مكوّن من نوع <code>machine-learning-model</code>، وبطاقة نموذج <code>modelCard</code> فيها المهمة ومجموعات البيانات، وسلسلة الأصل <code>pedigree</code></td></tr>
+    <tr><td><span class="en">SPDX 3.0.1</span>، ملفا الذكاء الاصطناعي ومجموعات البيانات</td><td>حزمة <code>AIPackage</code> بحقول مثل نوع النموذج، ومعلومات التدريب، واستخدام بيانات شخصية حساسة، وتقييم مخاطر السلامة</td></tr>
+  </table>
+  <div class="callout tip mt"><b>القائمة لا تعرف أكثر من مصادرها.</b> ما لا تعلنه البطاقة يظهر في القائمة فراغًا، وهذا الفراغ نفسه معلومة.</div>
+  <aside class="notes"><p>لا تدخل في تفاصيل الحقول؛ المهم أن تعرف القاعة أن المعيارين موجودان، وأن أدوات تحليل مكونات البرمجيات (مثل ScanCode Toolkit وOSV-Scanner) تتعامل مع الرمز، وأن المعيارين يوسعانها إلى النماذج والبيانات.</p><p>المصادر: CycloneDX Specification Overview (الإصدار 1.7، ECMA-424) ومخطط bom-1.7؛ SPDX Specification 3.0.1، ملف AI.</p></aside>
+</section>
+
+<section class="slide" id="hash-vs-signature" data-lo="LO2">
+  <div class="kicker">البصمة والتوقيع</div>
+  <h2>البصمة تثبت أن الملف لم يتغير، والتوقيع يثبت ممن جاء</h2>
+  <table class="t">
+    <tr><th></th><th>البصمة <span class="en">SHA-256</span></th><th>التوقيع</th></tr>
+    <tr><td>ما يثبته</td><td>أن الملف مطابق لبصمة تعرفها</td><td>أن الملفات كما وقّعها حامل مفتاح معيّن</td></tr>
+    <tr><td>ما لا يثبته</td><td>من نشر البصمة</td><td>أن حامل المفتاح هو الناشر الذي تظنه</td></tr>
+    <tr><td>ما لا يثبته أيٌّ منهما</td><td colspan="2">الترخيص، والبيانات، والجودة، والسلامة</td></tr>
+  </table>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> «التوقيع صحيح، إذن النموذج آمن». التوقيع الصحيح على نموذج سيئ يثبت فقط أنه السيئ نفسه.</div>
+  <aside class="notes"><p>اسأل: كيف تعرف أن المفتاح العام للناشر؟ من صفحة يملكها الناشر، أو من شهادة مرتبطة بهويته، أو من سجل شفافية. هذا ما يحله التوقيع بلا مفاتيح في Sigstore.</p></aside>
+</section>
+
+<section class="slide" id="model-signing" data-lo="LO2">
+  <div class="kicker">التوقيع عمليًا</div>
+  <h2>توقيع النماذج على <span class="en">Sigstore</span>: ثلاث طرق، وأمر تحقق واحد</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>بلا مفاتيح:</b> هوية الموقّع من حسابه، والتوقيع يُسجَّل في سجل شفافية عام</li>
+      <li><b>بمفتاح:</b> زوج مفاتيح يملكه الناشر، والعام منشور</li>
+      <li><b>بشهادة:</b> مفتاح مرتبط بشهادة من جهة الناشر</li>
+    </ul>
+    <pre class="code" data-file="terminal"><code>model_signing verify key MODEL_DIR \
+  --signature model.sig \
+  --public_key publisher.pub</code></pre>
+  </div>
+  <div class="callout note mt"><b>هنا نتحقق فقط.</b> التوقيع في مسارات البناء وسلاسل التحقق موضوع <span class="en">DEV-SEC-304</span>.</div>
+  <aside class="notes"><p>مكتبة model_signing من مشروع model-transparency في Sigstore، الإصدار 1.1.1 وقت كتابة المقرر. التحقق يحسب بصمة كل ملف في المجلد ويقارنها بما وُقّع، ويبلغ عن الملف المتغير والملف الزائد والملف الناقص. للعام: cosign أداة Sigstore العامة لتوقيع الحاويات والملفات.</p><p>المصادر: مستودع sigstore/model-transparency على GitHub؛ وثائق Sigstore cosign.</p></aside>
+</section>
+
+<section class="slide" id="poisoned-artefacts" data-lo="LO2">
+  <div class="kicker">أصول مضللة</div>
+  <h2>المنصة العامة مستودع مفتوح، لا جهة تحقق</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>نموذج يشغّل رمزًا عند تحميله</h4><p class="small mb0">في فبراير 2024 وصف باحثو <span class="en">JFrog</span> نموذج <span class="en">PyTorch</span> على <span class="en">Hugging Face</span> يفتح اتصالًا عكسيًا بجهاز خارجي عند تحميله، عبر صيغة <span class="en">pickle</span>.</p></div>
+    <div class="card c-amber"><h4>المنصة تنبّه ولا تمنع</h4><p class="small mb0">فحص <span class="en">pickle</span> يعلّم الملفات «غير آمنة» ويبقيها قابلة للتنزيل. صيغة <span class="en">safetensors</span> تخزن الأوزان بلا رمز.</p></div>
+  </div>
+  <div class="callout warn mt"><b>علامات تستحق الوقوف.</b> نسخة «أسرع» من نموذج معروف، أو اسم قريب من اسمه، أو طلب تشغيل رمز المحمِّل.</div>
+  <aside class="notes"><p>لا تُخِف القاعة: أكثر النسخ المختلفة غير خبيثة، لكنها غير معروفة المصدر. القاعدة: تُستخدم النسخة التي يتحقق توقيعها أو بصمتها من مصدر الناشر.</p><p>المصادر: JFrog Security Research، Data Scientists Targeted by Malicious Hugging Face ML Models with Silent Backdoor (27 فبراير 2024)؛ وثائق Hugging Face عن أمن pickle.</p></aside>
+</section>
+
+<section class="slide" id="provenance-record" data-lo="LO2">
+  <div class="kicker">سجل المنشأ</div>
+  <h2>سجل المنشأ يفصل ما تحققت منه عمّا أعلنه الناشر</h2>
+  <table class="t small">
+    <tr><th>الحقل</th><th>مثال من نموذج تحسين المسارات</th><th>الحالة</th></tr>
+    <tr><td>المصادر</td><td>صفحة الناشر، والبطاقة، والمستودع</td><td>معلن</td></tr>
+    <tr><td>تاريخ الإصدارات</td><td>إصداران، والثاني بلا وصف للتغيير</td><td>معلن</td></tr>
+    <tr><td>البيانات المعلنة</td><td>«بيانات حركة من شركاء»</td><td>سؤال مفتوح</td></tr>
+    <tr><td>التوقيعات</td><td>توقيع صحيح بمفتاح منشور في صفحة الناشر</td><td>تحقق</td></tr>
+    <tr><td>الأسئلة المفتوحة</td><td>من الشركاء؟ ما ترخيص بياناتهم؟</td><td>لمن، ومتى</td></tr>
+  </table>
+  <aside class="notes"><p>هذه هي أعمدة الدليل في ناتج التعلم الثاني: المصادر، وتاريخ الإصدارات، والبيانات المعلنة، والتوقيعات التي جرى التحقق منها، والأسئلة المفتوحة. القالب في المختبر يضيف عمود «تحقق أم إعلان».</p></aside>
+</section>
+
+<section class="slide" id="check-signature-proves" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما الذي ثبت فعلًا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">تحققت جهة توصيل الطرود من توقيع نموذج تحسين المسارات بالمفتاح المنشور في صفحة ناشره، فجاءت النتيجة صحيحة. بطاقة النموذج تذكر نموذجًا أساسيًا لا يُعرف ترخيصه. ماذا تكتب في سجل المنشأ؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>الملفات كما وقّعها حامل المفتاح، والنموذج الأساسي سؤال مفتوح</div>
+      <div class="opt" data-why="يمد ما يثبته التوقيع إلى الترخيص: التوقيع لا يقول شيئًا عن شروط الأصل">النموذج وأصله مرخصان، لأن الناشر وقّع على الحزمة كاملة</div>
+      <div class="opt" data-why="يعامل الفراغ في البطاقة كأنه فشل في التحقق، والتحقق نفسه نجح">الحزمة غير موثوقة حتى يُعاد التحقق من توقيعها بمفتاح آخر</div>
+      <div class="opt" data-why="يخلط بين المنشأ والجودة: لا التوقيع ولا البطاقة يقيسان أداء النموذج">النموذج آمن للاستخدام، والأصل يُراجع عند التقييم الدوري</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> التوقيع يربط الملفات بحامل المفتاح فقط. ترخيص الأصل لم يعلنه أحد، فيبقى سؤالًا مفتوحًا للناشر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. إن اختار كثيرون «ب»، عد إلى جدول البصمة والتوقيع: صف «ما لا يثبته أي منهما».</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>اعرض أول أمر على شاشتك قبل بدء المؤقت. أكثر مشكلة: uv غير مثبت أو جدار حماية يمنع تنزيل المكتبتين. البديل: العمل في أزواج، أو تشغيل الأوامر على شاشتك وقراءة المخرجات معًا.</p><p>في الدقيقة الخامسة والعشرين يجب أن يكون الجميع قد شغّل أمر التحقق مرتين. ذكّر بأن السجل نصف المختبر.</p></aside>
+</section>
+
+<section class="slide" id="debrief-1-2" data-label="بعد المختبر 1.2" data-lo="LO2">
+  <div class="kicker">بعد المختبر 1.2</div>
+  <h2>التوقيع نجح مرة وفشل مرة، والسؤال الأهم لم يحسمه أي منهما</h2>
+  <div class="cols cols-3">
+    <div class="stat center"><div class="big">6 من 6</div><div class="lbl">ملفات الحزمة الرسمية كما وُقّعت</div></div>
+    <div class="stat center"><div class="big">3</div><div class="lbl">أسباب لفشل النسخة الثانية: ملف إضافي وملفان متغيران</div></div>
+    <div class="stat center"><div class="big">2</div><div class="lbl">بصمتان مختلفتان لملف الأوزان بين 1.0 و1.1</div></div>
+  </div>
+  <div class="callout warn mt"><b>السؤال المفتوح الذي يربط اليوم.</b> البطاقة تذكر fawatir-scans بين بيانات التدريب، وهي التي علّقتموها في المختبر 1.1 لأنها غير تجارية.</div>
+  <aside class="notes"><p>الأرقام من تشغيل tools/provenance.py على الحزمة: التحقق على الحزمة الرسمية صحيح لكل الملفات الستة؛ النسخة الثانية فيها custom_loader.py زائد، وREADME.md وmodel.safetensors متغيران. بصمة الأوزان الحالية تختلف عن البصمة المنشورة للإصدار 1.0.</p><p>اسأل: هل يرث النموذج قيد البيانات؟ لا تحسمه القاعة؛ هو سؤال للشؤون القانونية وللناشر، ومكانه في السجل.</p></aside>
 </section>
 
 <!-- الجلسة 3 -->
 
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="evidence-kinds" data-lo="LO3">
+  <div class="kicker">أنواع الأدلة</div>
+  <h2>كل دليل يجيب عن سؤال: من قال هذا، ومن تحقق منه؟</h2>
+  <div class="flow">
+    <div class="step c-coral"><b>1 · إقرار المورِّد</b>استبانة، ووصف، وسياسات</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>2 · تقييم المورِّد لنفسه</b>اختباراته على بياناته</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>3 · طرف ثالث</b>شهادة، أو تدقيق، أو اختبار مستقل</div>
+    <div class="arrow">←</div>
+    <div class="step c-teal"><b>4 · اختبارك أنت</b>بياناتك وحالاتك</div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout tip mt"><b>لا ترتيب مطلق.</b> شهادة من طرف ثالث على خدمة أخرى أضعف من إقرار دقيق عن خدمتك.</div>
+  <aside class="notes"><p>السلم يرتب الاستقلالية لا القيمة. السؤال الذي يكمله دائمًا: عن أي شيء بالضبط؟ وهذا موضوع الشريحة التالية.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="relevance-sufficiency" data-lo="LO3">
+  <div class="kicker">التقدير</div>
+  <h2>قدّر كل دليل على محورين: الصلة والكفاية</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>الصلة</h4><p class="small mb0">هل يتناول الدليل الخدمة التي تشتريها، بالبيانات التي ترسلها، من الموقع الذي تُقدَّم منه؟</p></div>
+    <div class="card c-purple"><h4>الكفاية</h4><p class="small mb0">هل يكفي وحده: حديث، ومستقل بقدر الحاجة، ومفصّل بما يكفي لقرار؟</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <table class="t small mt">
+    <tr><th>مثال من مورِّد مساعد مدرسي</th><th>الصلة</th><th>الكفاية</th></tr>
+    <tr><td>سياسة خصوصية عامة على موقعه</td><td>متوسطة</td><td>غير كافٍ</td></tr>
+    <tr><td>نتائج اختبار مستقل على أسئلة طلاب بالعربية، قبل شهرين</td><td>عالية</td><td>كافٍ</td></tr>
+  </table>
+  <aside class="notes"><p>المثال افتراضي. اطلب من القاعة تقدير دليل ثالث: «شهادة أمن معلومات للشركة الأم». الصلة تعتمد على النطاق، فلا جواب قبل قراءته.</p></aside>
+</section>
+
+<section class="slide" id="questionnaires" data-lo="LO3">
+  <div class="kicker">الاستبانات ومصفوفات الضوابط</div>
+  <h2>الاستبانة المعيارية تنظم الأسئلة، ولا تثبت الأجوبة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>مصفوفة ضوابط الذكاء الاصطناعي <span class="en">AICM</span>:</b> 243 هدف ضبط في 18 مجالًا، من <span class="en">Cloud Security Alliance</span></li>
+      <li><b>استبانتها <span class="en">AI-CAIQ</span>:</b> أسئلة تقابل الضوابط، للتقييم الذاتي أو لتقييم المورِّدين</li>
+      <li><b>المستوى الأول من <span class="en">STAR for AI</span>:</b> تقييم ذاتي منشور في سجل عام</li>
+    </ul>
+    <div class="card tint c-navy"><h4>ما تبحث عنه في الأجوبة</h4><p class="small mb0">«نعم» بلا دليل. جواب عن سؤال آخر. جواب يتكلم عن «نحن» ويسكت عن مورِّد المورِّد.</p></div>
+  </div>
+  <aside class="notes"><p>AICM صدرت في يوليو 2025، والإصدار 1.1 هو الأحدث في صفحتها، وتربط ضوابطها بمعايير منها ISO/IEC 42001 وNIST AI RMF. تُنزَّل مجانًا من صفحتها. الاستبانة الخاصة بالجهة بديل مقبول؛ المهم أن تطلب الدليل مع كل جواب.</p><p>المصادر: صفحة AI Controls Matrix لدى Cloud Security Alliance.</p></aside>
+</section>
+
+<section class="slide" id="read-certificate" data-lo="LO3">
+  <div class="kicker">قراءة الشهادة</div>
+  <h2>اقرأ في الشهادة خمسة أشياء، أهمها سطر النطاق</h2>
+  <table class="t">
+    <tr><th>الحقل</th><th>ما تسأل عنه</th></tr>
+    <tr><td>المعيار</td><td>نظام إدارة الذكاء الاصطناعي <span class="en">ISO/IEC 42001:2023</span>، أم أمن المعلومات <span class="en">ISO/IEC 27001</span>، أم غيرهما؟</td></tr>
+    <tr class="hl"><td>النطاق</td><td>أي منتج أو خدمة أو نشاط بالضبط؟</td></tr>
+    <tr><td>المواقع</td><td>أي مكتب أو مركز بيانات؟</td></tr>
+    <tr><td>الصلاحية</td><td>إلى متى، وهل تجري تدقيقات المراقبة السنوية؟</td></tr>
+    <tr><td>جهة المنح واعتمادها</td><td>من منحها، ومن اعتمد الجهة المانحة؟</td></tr>
+  </table>
+  <div class="callout note mt small"><b>اعتماد الجهة المانحة.</b> <span class="en">ISO/IEC 42006:2025</span> يحدد متطلبات الجهات التي تدقق أنظمة إدارة الذكاء الاصطناعي وتمنح شهاداتها.</div>
+  <aside class="notes"><p>تحقق من الشهادة في سجل الجهة المانحة، ومن اعتماد الجهة المانحة في سجل جهة الاعتماد: في المملكة سجل الجهات المعتمدة لدى المركز السعودي للاعتماد، ودوليًا قاعدة IAF CertSearch.</p><p>المصادر: صفحتا ISO/IEC 42001:2023 وISO/IEC 42006:2025 لدى ISO؛ موقع المركز السعودي للاعتماد؛ IAF CertSearch.</p></aside>
+</section>
+
+<section class="slide" id="scope-words" data-lo="LO3">
+  <div class="kicker">النطاق</div>
+  <h2>كلمات النطاق التي تضيّق الشهادة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>«للمنصة س»:</b> منتج بعينه، لا الشركة كلها</li>
+      <li><b>«في الموقع ص»:</b> مكتب أو مركز بيانات واحد</li>
+      <li><b>«باستثناء»:</b> ما أُخرج صراحة</li>
+      <li><b>«وفق بيان قابلية التطبيق»:</b> ضوابط مختارة لا كل الضوابط</li>
+    </ul>
+    <div class="card c-amber"><h4>قاعدة القراءة</h4><p class="small mb0">اكتب في سطر ما تشتريه: الخدمة، والبيانات، والموقع. ثم ضع سطر النطاق بجانبه. ما لا يظهر في النطاق لا تغطيه الشهادة.</p></div>
+  </div>
+  <aside class="notes"><p>الشهادة صالحة والشركة معتمدة، لكن السؤال دائمًا: هل خدمتي داخل النطاق؟ المورِّد يرسل أفضل شهادة لديه، لا بالضرورة الشهادة التي تخص ما تشتريه.</p></aside>
+</section>
+
+<section class="slide" id="national-evidence" data-lo="LO3">
+  <div class="kicker">أدلة وطنية</div>
+  <h2>اعتماد مقدمي خدمات الذكاء الاصطناعي يُمنح لمنتج، فاسأل: أي منتج؟</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · التسجيل</b>الجهة في منصة حوكمة البيانات الوطنية</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · مسؤول ذكاء اصطناعي</b>تعيّنه الجهة</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · المنتج</b>استبيان وملفات لكل منتج</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>4 · اللجنة</b>وسم تحفيزي للمنتج، ثم شهادة الاعتماد</div>
+  </div>
+  <div class="callout tip mt"><b>دليلًا من المورِّد:</b> اطلب اسم المنتج المعتمد ورقم الشهادة، وتحقق منهما. وأداة التقييم الذاتي لأخلاقيات الذكاء الاصطناعي في المنصة نفسها تقيس التزام الجهة بالمبادئ.</div>
+  <aside class="notes"><p>من صفحة الخدمة في منصة حوكمة البيانات الوطنية: المتطلبات تسجيل الجهة، وتعيين مسؤول ذكاء اصطناعي، وتعبئة الاستبيان وإرفاق الملفات؛ وبعد مراجعة اللجنة يصدر الوسم التحفيزي للمنتج ثم شهادة اعتماد مقدم الخدمة. الأداة موصوفة بأنها تحليل لمدى الالتزام بالمعايير الأخلاقية في تطوير التقنيات وتطبيقها. لا تذكر للقاعة مستويات أو مددًا لم تقرأها في الصفحة الرسمية.</p><p>المصادر: منصة حوكمة البيانات الوطنية، صفحتا «اعتماد مقدمي خدمات الذكاء الاصطناعي» و«تقييم أخلاقيات الذكاء الاصطناعي»؛ مبادئ أخلاقيات الذكاء الاصطناعي (سدايا).</p></aside>
+</section>
+
+<section class="slide" id="independence-fourth" data-lo="LO3">
+  <div class="kicker">التقييم والأطراف الرابعة</div>
+  <h2>تقييم المورِّد لنفسه يجيب عن سؤاله هو، ومورِّده جزء من خدمتك</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>ثلاثة أسئلة عن أي تقييم</h4><p class="small mb0">من اختار البيانات؟ من شغّل الاختبار؟ من حكم على النتائج؟ إذا كان الجواب «المورِّد» ثلاث مرات، فهو دعاية مرتبة.</p></div>
+    <div class="card c-purple"><h4>الطرف الرابع</h4><p class="small mb0">خدمة الوكلاء تستدعي نموذجًا لدى مزوّد آخر: بياناتك تمر به، وتغييراته تصل إليك، وموقعه موقع بياناتك.</p></div>
+  </div>
+  <div class="callout note mt"><b>اختبارك أنت.</b> مجموعة حالات يملكها المشتري ولا يراها المورِّد مسبقًا؛ بناؤها في <span class="en">LDS-EXE-205</span>.</div>
+  <aside class="notes"><p>اطلب دائمًا قائمة الأطراف من الباطن مع ما يعالجه كل طرف وأين. كثير من خدمات الوكلاء غلاف حول نموذج لدى مزوّد ثالث.</p></aside>
+</section>
+
+<section class="slide" id="after-signature" data-lo="LO3">
+  <div class="kicker">بعد التوقيع</div>
+  <h2>الضمان لا ينتهي بالتوقيع، والمسؤولية لا تنتقل بالعقد</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>الضوابط الأساسية للأمن السيبراني (<span class="en">ECC-2:2024</span>)، 4-1:</b> بنود عدم الإفصاح والإزالة الآمنة لبيانات الجهة عند انتهاء الخدمة، وإجراءات الإبلاغ عن الحوادث، ومراجعة المتطلبات دوريًا</li>
+      <li><b>4-2:</b> حماية البيانات حسب تصنيفها لدى مزوّد السحابة، وإعادتها بصيغة قابلة للاستخدام عند انتهاء الخدمة</li>
+    </ul>
+    <div class="card tint c-navy"><h4>الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي</h4><p class="small mb0">نقل جزء من المخاطر إلى مورِّد بالعقد أو الضمان لا يلغي مسؤولية الجهة عن الحوكمة والامتثال.</p></div>
+  </div>
+  <div class="callout tip mt small"><b>بعد التوقيع:</b> تقارير المراقبة السنوية للشهادات، وقائمة الأطراف من الباطن عند كل تغيير، وإعادة الاختبار عند تغيير النموذج.</div>
+  <aside class="notes"><p>الضوابط الأساسية للأمن السيبراني، المجال الفرعي 4-1 (الأطراف الخارجية): الضوابط 4-1-2 (عدم الإفصاح والإزالة الآمنة للبيانات، والإبلاغ عن الحوادث، وإلزام الطرف بمتطلبات الجهة) و4-1-4 (المراجعة الدورية). المجال الفرعي 4-2 (الحوسبة السحابية والاستضافة): 4-2-3. ويضاف إليها المحور الخاص بالأطراف الثالثة في مسودة إرشادات الأمن السيبراني للذكاء الاصطناعي التي طرحتها الهيئة الوطنية للأمن السيبراني للاستطلاع؛ لم نقرأ نصها، فلا نذكر محتواه.</p><p>المصادر: Essential Cybersecurity Controls (ECC-2:2024)، الهيئة الوطنية للأمن السيبراني؛ الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (سدايا)، خيارات معالجة المخاطر: النقل.</p></aside>
+</section>
+
+<section class="slide" id="check-certificate-scope" data-lo="LO3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ماذا تقول هذه الشهادة عن الخدمة التي تشتريها؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">مورِّد مساعد مدرسي يرسل شهادة <span class="en">ISO/IEC 27001</span> صالحة، نطاقها «تشغيل مركز البيانات في جدة». المساعد نفسه يعمل على سحابة مزوّد آخر في الدمام. كيف تقدّر هذا الدليل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقرأ صلاحية الشهادة ويتجاوز النطاق: الصلاحية لا توسع ما تغطيه">صلته عالية، فالشهادة صالحة وصادرة باسم المورِّد نفسه</div>
+      <div class="opt" data-why="يرى المعيار خطأ بحد ذاته، والمعيار مناسب لأمن الاستضافة لو شملها النطاق">صلته ضعيفة، لأن هذا المعيار لا يناسب أي خدمة ذكاء اصطناعي</div>
+      <div class="opt" data-why="يعامل الشهادة على الشركة كأنها على كل ما تقدمه، والنطاق يحدد موقعًا آخر">كافٍ وحده للأمن، ويكمّله اختبار للجودة قبل التوقيع</div>
+      <div class="opt" data-ok>صلته ضعيفة بالخدمة، فالنطاق لا يشمل موقع تشغيلها</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> النطاق يغطي مركز بيانات لا تعمل فيه الخدمة. الشهادة صالحة، لكنها عن شيء آخر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. من يختار «ج» يعامل الشهادة شهادةً على الشركة. أعد قاعدة القراءة: سطر ما تشتريه بجانب سطر النطاق.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>وزّع العمل إن كانت المجموعات بطيئة: نصف القاعة يبدأ بالشهادات ونصفها بالاستبانة، ثم يتبادلون. في الدقيقة الأربعين اطلب أن تبدأ المذكرة حتى لو لم يكتمل التقدير.</p><p>المشكلة المعتادة: قراءة تاريخ الصلاحية والتوقف عنده. اسأل المجموعة: ما الخدمة المذكورة في سطر النطاق؟</p></aside>
 </section>
 
-<!-- الجلسة 4 -->
-
-<section class="slide section" id="s4" data-auto="section" data-session="4"></section>
-
-<section class="slide" id="s4-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
-</section>
-
-<section class="slide" id="s4-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
-  </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
-</section>
-
-<section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+<section class="slide" id="debrief-1-3" data-label="بعد المختبر 1.3" data-lo="LO3">
+  <div class="kicker">بعد المختبر 1.3</div>
+  <h2>أقوى شهادة في الحزمة كانت عن منتج آخر</h2>
+  <table class="t small">
+    <tr><th>الدليل</th><th>الصلة</th><th>الكفاية</th><th>السبب</th></tr>
+    <tr class="hl"><td>E2 · <span class="en">ISO/IEC 42001</span></td><td>ضعيفة</td><td>غير كافٍ</td><td>النطاق منصة DocSense وحدها، ولا اعتماد مذكور للجهة المانحة</td></tr>
+    <tr><td>E4 · تقييم المورِّد</td><td>عالية</td><td>غير كافٍ</td><td>فريق المنتج اختار البيانات وحكم عليها، ولا نتائج حسب اللهجة</td></tr>
+    <tr><td>E5 · اختبار الاختراق</td><td>متوسطة</td><td>غير كافٍ</td><td>عمره 18 شهرًا، و«مُتابِع» خارج نطاقه صراحة</td></tr>
+    <tr><td>E6 · الأطراف من الباطن</td><td>عالية</td><td>كافٍ إفصاحًا</td><td>نص المحادثة واسم المقترض ورصيده يُعالج خارج المملكة</td></tr>
+  </table>
+  <aside class="notes"><p>اعرضها بعد المختبر فقط. الأرقام من ملفات الحزمة: 8 من 14 جوابًا في الاستبانة بلا دليل؛ اختبار الاختراق في أغسطس 2025 والحزمة في فبراير 2027. المذكرة المرجعية في labs/solutions/D1_3_assurance.md.</p><p>اربط E6 بالغد: المزوّد خارج المملكة هو نفسه مزوّد النماذج الذي سيعلن الإيقاف.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
-  <div class="kicker">خلاصة اليوم 1</div>
-  <h2>ثلاثة أمور تبقى معك</h2>
+  <div class="kicker">الخلاصة</div>
+  <h2>ثلاثة أشياء تأخذها من اليوم الأول</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>الترخيص نص لا عنوان</h4><p class="small mb0">أربعة أسئلة لكل ترخيص، وبند لكل إجابة، والأكثر تقييدًا عند التعارض.</p></div>
+    <div class="card c-cyan"><h4>المنشأ ما تحققت منه</h4><p class="small mb0">البصمة والتوقيع يثبتان الملفات، والبطاقة تعلن، والفراغ سؤال مفتوح.</p></div>
+    <div class="card c-purple"><h4>الدليل على قدر نطاقه</h4><p class="small mb0">الصلة والكفاية لكل دليل، وسطر النطاق قبل تاريخ الصلاحية.</p></div>
   </div>
+  <aside class="notes"><p>اطلب من كل مشارك أن يكتب في سطر واحد المكوّن الخارجي الذي سيختاره لملف المراجعة الختامي. سيعمل عليه من الوثائق العامة وحدها.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
-  <div class="kicker">التالي</div>
-  <h2>اليوم 2: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <div class="kicker">غدًا</div>
+  <h1>التغيير والخروج والإيقاف</h1>
+  <p class="lead">مزوّد يوقف نموذجًا بإشعار قصير، ونموذج قرار ائتماني يُوقف أمام مجلس تغيير. احتفظ بجداول اليوم: ستعود إليها.</p>
+  <aside class="notes"><p>العمل الموجّه الليلة (ساعة): ابدأ ملف المراجعة الختامي للمكوّن الذي اخترته: الترخيص بالأسئلة الأربعة، وما تجده من منشأ في صفحته العامة.</p></aside>
 </section>

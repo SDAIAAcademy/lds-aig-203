@@ -1,0 +1,7 @@
+{
+  "architecture": "KhattOCRSmall",
+  "hidden_size": 16,
+  "num_labels": 8,
+  "image_size": 384,
+  "torch_dtype": "float32"
+}
